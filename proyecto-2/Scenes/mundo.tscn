@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dknlslj6fi6w8"]
+
+[node name="Mundo" type="Node" unique_id=118882737]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1446537754]
