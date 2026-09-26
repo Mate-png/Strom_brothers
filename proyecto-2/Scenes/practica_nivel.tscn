@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://c7jaudcip3kuu"]
+
+[ext_resource type="Texture2D" uid="uid://bhnuq56yqibd7" path="res://icon.svg" id="1_o37dk"]
+[ext_resource type="PackedScene" uid="uid://o2bjoybuhyyi" path="res://Scenes/Player.tscn" id="2_6x4ks"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(20, 147)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(629, 20)
+
+[node name="Practica nivel" type="Node2D" unique_id=276535021]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=36430678]
+position = Vector2(557, 370)
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D" unique_id=1187141733]
+position = Vector2(0, -59)
+scale = Vector2(0.15723944, 1.2090889)
+texture = ExtResource("1_o37dk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1005917916]
+position = Vector2(0, -63.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=740461455]
+position = Vector2(251, 390)
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D2" unique_id=381926977]
+position = Vector2(305, 1)
+scale = Vector2(-4.8825874, 0.17107306)
+texture = ExtResource("1_o37dk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1203731820]
+position = Vector2(304.5, 0)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="Player" parent="." unique_id=2016557864 instance=ExtResource("2_6x4ks")]
+position = Vector2(324, 315)
