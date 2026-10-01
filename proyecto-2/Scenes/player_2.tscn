@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://dai3jy3ilbudu"]
+
+[ext_resource type="Script" uid="uid://ufbbup5qh82x" path="res://Scripts/player_2.gd" id="1_cgts5"]
+[ext_resource type="Texture2D" uid="uid://bpabywnyy77rk" path="res://Assets/2D/kenney_new-platformer-pack-1.1/Sprites/Characters/Double/character_beige_front.png" id="2_cgts5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yf5fn"]
+radius = 12.0
+height = 28.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [],
+"loop": 0,
+"name": &"dash",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"idle",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": 0,
+"name": &"jump",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"walk",
+"speed": 12.0
+}]
+
+[node name="Player2" type="CharacterBody2D" unique_id=1414705170]
+script = ExtResource("1_cgts5")
+
+[node name="CharacterBeigeFront" type="Sprite2D" parent="." unique_id=1899800572]
+position = Vector2(0, -4.0000005)
+scale = Vector2(-0.17188737, 0.14865127)
+texture = ExtResource("2_cgts5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=101814628]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_yf5fn")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=879582761]
+position = Vector2(-1.0000019, -10.999999)
+scale = Vector2(0.3483166, 0.30107525)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"walk"
+autoplay = "idle"

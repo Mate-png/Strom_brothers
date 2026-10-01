@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://dknlslj6fi6w8"]
 
+[ext_resource type="Script" uid="uid://der1oyr7mnph4" path="res://Scenes/mundo.gd" id="1_4cw5y"]
+
 [sub_resource type="TileSet" id="TileSet_g4v7s"]
 
 [node name="Mundo" type="Node" unique_id=118882737]
+script = ExtResource("1_4cw5y")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1446537754]
 tile_set = SubResource("TileSet_g4v7s")
