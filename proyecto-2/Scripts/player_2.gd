@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+#region constantes
 const SPEED = 200
 const JUMP_VELOCITY = -400.0
 const DASH_DURATION = 0.2
@@ -13,21 +13,27 @@ const WALL_JUMP_VELOCITY_X = 350.0
 
 const WALL_COYOTE_TIME= 0.12
 const WALL_LOCK_TIME= 0.12
+#endregion
 
+#region  variables
 var wall_coyote_timer= 0.0
 var wall_lock_timer = 0.0
 var last_wall_normal = 0.0
 
-var can_move: bool = true
+var can_move: bool = false
 var is_dashing = false
 var dash_dir: Vector2 = Vector2.ZERO
+#endregion
+
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 func _physics_process(_delta: float) -> void:
+	
+	
 	var direction := Input.get_axis("Left","Rigth")
 	if not is_on_floor():
 		velocity.y += GRAVITY
-	if can_move :
+	if can_move == true :
 		handle_wall()
 		handle_jump()
 		if wall_lock_timer<= 0.0:
@@ -44,11 +50,14 @@ func _physics_process(_delta: float) -> void:
 			pass
 		else:
 			velocity.x = direction * SPEED
+	if can_move == false:
+		velocity.x = 0
 	update_animation(direction)
 	move_and_slide()
 
 func morir():
-	pass
+	print("mori2")
+	get_tree().reload_current_scene()
 
 func start_dash(dir: float):
 	is_dashing = true
@@ -85,6 +94,9 @@ func handle_jump():
 		
 		wall_lock_timer = WALL_LOCK_TIME 
 		wall_coyote_timer = 0.0
+
+
+
 
 
 func update_animation(direction: float) -> void:
