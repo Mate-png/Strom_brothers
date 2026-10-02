@@ -2,6 +2,11 @@
 
 [ext_resource type="Script" uid="uid://der1oyr7mnph4" path="res://Scripts/mundo.gd" id="1_4cw5y"]
 [ext_resource type="Texture2D" uid="uid://f1douhw6hyux" path="res://Art/sheet.png" id="2_uqtxj"]
+[ext_resource type="PackedScene" uid="uid://o2bjoybuhyyi" path="res://Scenes/Player.tscn" id="3_gqidu"]
+[ext_resource type="PackedScene" uid="uid://dai3jy3ilbudu" path="res://Scenes/player_2.tscn" id="4_glouy"]
+[ext_resource type="PackedScene" uid="uid://vdmvablmj6wt" path="res://Scenes/daño.tscn" id="5_i8avv"]
+[ext_resource type="Script" uid="uid://cv7lcrbts3bga" path="res://Scripts/camera script.gd" id="5_yf8a8"]
+[ext_resource type="PackedScene" uid="uid://bowar38bsrmnd" path="res://Scenes/deadline.tscn" id="6_qxsm7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqidu"]
 texture = ExtResource("2_uqtxj")
@@ -217,6 +222,26 @@ sources/0 = SubResource("TileSetAtlasSource_gqidu")
 [node name="Mundo" type="Node" unique_id=118882737]
 script = ExtResource("1_4cw5y")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1446537754]
+[node name="Piso" type="TileMapLayer" parent="." unique_id=1446537754]
 tile_map_data = PackedByteArray("AAAAABEAAAAAAAIAAAABABEAAAABAAIAAAACABEAAAAAAAIAAAADABEAAAABAAIAAAAEABEAAAAAAAIAAAAFABEAAAABAAIAAAAGABEAAAAAAAIAAAAHABEAAAABAAIAAAAAABIAAAAAAAMAAAABABIAAAABAAMAAAACABIAAAAAAAMAAAADABIAAAABAAMAAAAEABIAAAAAAAMAAAAFABIAAAABAAMAAAAGABIAAAAAAAMAAAAHABIAAAABAAMAAAAIABEAAAAAAAIAAAAIABIAAAAAAAMAAAAJABEAAAABAAIAAAAJABIAAAABAAMAAAAKABEAAAAAAAIAAAAKABIAAAAAAAMAAAALABEAAAABAAIAAAALABIAAAABAAMAAAAMABEAAAAAAAIAAAAMABIAAAAAAAMAAAANABEAAAABAAIAAAANABIAAAABAAMAAAAOABEAAAAAAAIAAAAOABIAAAAAAAMAAAAPABEAAAABAAIAAAAPABIAAAABAAMAAAAQABEAAAAAAAIAAAAQABIAAAAAAAMAAAARABEAAAABAAIAAAARABIAAAABAAMAAAASABEAAAAAAAIAAAASABIAAAAAAAMAAAATABEAAAABAAIAAAATABIAAAABAAMAAAAUABEAAAAAAAIAAAAUABIAAAAAAAMAAAAVABEAAAABAAIAAAAVABIAAAABAAMAAAAWABEAAAAAAAIAAAAWABIAAAAAAAMAAAAXABEAAAABAAIAAAAXABIAAAABAAMAAAAYABEAAAAAAAIAAAAYABIAAAAAAAMAAAAZABEAAAABAAIAAAAZABIAAAABAAMAAAAaABEAAAAAAAIAAAAaABIAAAAAAAMAAAAbABEAAAABAAIAAAAbABIAAAABAAMAAAAcABEAAAAAAAIAAAAcABIAAAAAAAMAAAAdABEAAAABAAIAAAAdABIAAAABAAMAAAAeABEAAAAAAAIAAAAeABIAAAAAAAMAAAAfABEAAAABAAIAAAAfABIAAAABAAMAAAA=")
 tile_set = SubResource("TileSet_ts7x6")
+
+[node name="deadline" parent="." unique_id=924711749 instance=ExtResource("6_qxsm7")]
+position = Vector2(489.00003, 674)
+
+[node name="daño" parent="." unique_id=848684379 instance=ExtResource("5_i8avv")]
+visible = false
+position = Vector2(-99, 488.00003)
+
+[node name="Jugadores" type="Node" parent="." unique_id=133596501]
+
+[node name="Player" parent="Jugadores" unique_id=2016557864 groups=["Jugadores"] instance=ExtResource("3_gqidu")]
+position = Vector2(34, 566)
+
+[node name="Player2" parent="Jugadores" unique_id=1414705170 groups=["Jugadores"] instance=ExtResource("4_glouy")]
+position = Vector2(1070, 564)
+
+[node name="Camara" type="Node2D" parent="." unique_id=1354526862]
+script = ExtResource("5_yf8a8")
+
+[node name="Camera2D" type="Camera2D" parent="Camara" unique_id=752966888]

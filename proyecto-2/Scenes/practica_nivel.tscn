@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://c7jaudcip3kuu"]
 
-[ext_resource type="Script" uid="uid://der1oyr7mnph4" path="res://Scenes/mundo.gd" id="1_gxfkt"]
+[ext_resource type="Script" uid="uid://der1oyr7mnph4" path="res://Scripts/mundo.gd" id="1_gxfkt"]
 [ext_resource type="Script" uid="uid://dfurl0u50a1k6" path="res://Scripts/daño.gd" id="1_hmlax"]
 [ext_resource type="Texture2D" uid="uid://bhnuq56yqibd7" path="res://icon.svg" id="1_o37dk"]
 [ext_resource type="PackedScene" uid="uid://o2bjoybuhyyi" path="res://Scenes/Player.tscn" id="2_6x4ks"]
+[ext_resource type="PackedScene" uid="uid://vdmvablmj6wt" path="res://Scenes/daño.tscn" id="2_nrdb8"]
 [ext_resource type="PackedScene" uid="uid://dai3jy3ilbudu" path="res://Scenes/player_2.tscn" id="3_jfd5m"]
-[ext_resource type="Script" uid="uid://cv7lcrbts3bga" path="res://Scenes/node_2d.gd" id="4_8avd1"]
+[ext_resource type="Script" uid="uid://cv7lcrbts3bga" path="res://Scripts/camera script.gd" id="4_8avd1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
 size = Vector2(20, 148.20105)
@@ -27,21 +28,8 @@ script = ExtResource("1_gxfkt")
 
 [node name="Daño" type="Node" parent="." unique_id=1637719869]
 
-[node name="daño" type="Area2D" parent="Daño" unique_id=893978159]
+[node name="daño" parent="Daño" unique_id=848684379 instance=ExtResource("2_nrdb8")]
 position = Vector2(190.9998, 392)
-scale = Vector2(0.7904559, 0.26556143)
-script = ExtResource("1_hmlax")
-
-[node name="Icon" type="Sprite2D" parent="Daño/daño" unique_id=1398421108]
-position = Vector2(0, -59)
-scale = Vector2(0.15723944, 1.2090889)
-texture = ExtResource("1_o37dk")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Daño/daño" unique_id=1936201421]
-position = Vector2(0, -59.986145)
-scale = Vector2(1.0000002, 0.99999994)
-shape = SubResource("RectangleShape2D_d0u6y")
-debug_color = Color(1, 0.01669468, 0.019494686, 0.41960785)
 
 [node name="daño2" type="Area2D" parent="Daño" unique_id=1694875211]
 position = Vector2(527, 202)
@@ -164,6 +152,5 @@ scale = Vector2(1.641915, 5.461148)
 shape = SubResource("RectangleShape2D_3gngh")
 debug_color = Color(0.9949911, 0, 0.22060123, 0.41960785)
 
-[connection signal="body_entered" from="Daño/daño" to="Daño/daño" method="_on_body_entered"]
 [connection signal="body_entered" from="Daño/daño2" to="Daño/daño2" method="_on_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

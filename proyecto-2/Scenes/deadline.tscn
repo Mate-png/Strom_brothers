@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bowar38bsrmnd"]
+
+[ext_resource type="Script" uid="uid://dfurl0u50a1k6" path="res://Scripts/daño.gd" id="1_lry1b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gngh"]
+
+[node name="deadline" type="Area2D" unique_id=924711749]
+scale = Vector2(42.91379, 0.42640585)
+script = ExtResource("1_lry1b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1909238015]
+position = Vector2(1.7036889, 177.92313)
+scale = Vector2(1.641915, 5.461148)
+shape = SubResource("RectangleShape2D_3gngh")
+debug_color = Color(0.9949911, 0, 0.22060123, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

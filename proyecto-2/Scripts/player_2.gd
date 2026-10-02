@@ -57,7 +57,7 @@ func _physics_process(_delta: float) -> void:
 
 func morir():
 	print("mori2")
-	get_tree().reload_current_scene()
+	get_tree().call_deferred("reload_current_scene")
 
 func start_dash(dir: float):
 	is_dashing = true
