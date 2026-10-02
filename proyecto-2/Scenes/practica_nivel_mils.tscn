@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://dibm1xlphqu3s"]
+
+[ext_resource type="Script" uid="uid://der1oyr7mnph4" path="res://Scenes/mundo.gd" id="1_br645"]
+[ext_resource type="Script" uid="uid://dfurl0u50a1k6" path="res://Scripts/daño.gd" id="2_7h81g"]
+[ext_resource type="Texture2D" uid="uid://bhnuq56yqibd7" path="res://icon.svg" id="3_svla2"]
+[ext_resource type="PackedScene" uid="uid://o2bjoybuhyyi" path="res://Scenes/Player.tscn" id="4_bd6xm"]
+[ext_resource type="PackedScene" uid="uid://dai3jy3ilbudu" path="res://Scenes/player_2.tscn" id="5_awcwh"]
+[ext_resource type="Script" uid="uid://cv7lcrbts3bga" path="res://Scenes/node_2d.gd" id="6_gpmoe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
+size = Vector2(20, 148.20105)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(20, 156.71489)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(629, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(325, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gngh"]
+
+[node name="Practica nivel" type="Node2D" unique_id=276535021]
+scale = Vector2(0.9984715, 1.0017477)
+script = ExtResource("1_br645")
+
+[node name="Daño" type="Node" parent="." unique_id=1637719869]
+
+[node name="daño" type="Area2D" parent="Daño" unique_id=893978159]
+position = Vector2(190.9998, 392)
+scale = Vector2(0.7904559, 0.26556143)
+script = ExtResource("2_7h81g")
+
+[node name="Icon" type="Sprite2D" parent="Daño/daño" unique_id=1398421108]
+position = Vector2(0, -59)
+scale = Vector2(0.15723944, 1.2090889)
+texture = ExtResource("3_svla2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Daño/daño" unique_id=1936201421]
+position = Vector2(0, -59.986145)
+scale = Vector2(1.0000002, 0.99999994)
+shape = SubResource("RectangleShape2D_d0u6y")
+debug_color = Color(1, 0.01669468, 0.019494686, 0.41960785)
+
+[node name="daño2" type="Area2D" parent="Daño" unique_id=1694875211]
+position = Vector2(527, 202)
+scale = Vector2(0.5371845, 0.1403679)
+script = ExtResource("2_7h81g")
+
+[node name="Icon" type="Sprite2D" parent="Daño/daño2" unique_id=719636967]
+position = Vector2(0, -59)
+scale = Vector2(0.15723944, 1.2090889)
+texture = ExtResource("3_svla2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Daño/daño2" unique_id=1520504454]
+position = Vector2(0, -59.986145)
+scale = Vector2(1.0000002, 0.99999994)
+shape = SubResource("RectangleShape2D_d0u6y")
+debug_color = Color(1, 0.01669468, 0.019494686, 0.41960785)
+
+[node name="plataformas" type="Node" parent="." unique_id=1197984182]
+
+[node name="a" type="StaticBody2D" parent="plataformas" unique_id=2085995140 groups=["Paredes"]]
+position = Vector2(516, 226)
+scale = Vector2(0.9984713, 1.0017477)
+
+[node name="Icon" type="Sprite2D" parent="plataformas/a" unique_id=907578914]
+position = Vector2(0, -59)
+scale = Vector2(0.15723944, 1.2090889)
+texture = ExtResource("3_svla2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plataformas/a" unique_id=968792024]
+position = Vector2(0, -58.897068)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="pared3" type="StaticBody2D" parent="plataformas" unique_id=1091305621 groups=["Paredes"]]
+position = Vector2(611.9999, 302)
+scale = Vector2(0.99847144, 1.0017477)
+
+[node name="Icon" type="Sprite2D" parent="plataformas/pared3" unique_id=926955027]
+position = Vector2(0, -59)
+scale = Vector2(0.15723944, 1.2090889)
+texture = ExtResource("3_svla2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plataformas/pared3" unique_id=2135085304]
+position = Vector2(0.00012225719, -60.893578)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="pared" type="StaticBody2D" parent="plataformas" unique_id=36430678 groups=["Paredes"]]
+position = Vector2(298.1486, 545.64667)
+scale = Vector2(0.9984715, 1.0017477)
+
+[node name="Icon" type="Sprite2D" parent="plataformas/pared" unique_id=1187141733]
+position = Vector2(0, -59)
+scale = Vector2(0.15723944, 1.2090889)
+texture = ExtResource("3_svla2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plataformas/pared" unique_id=1005917916]
+position = Vector2(0.8527132, -57.54608)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="plataformas" unique_id=740461455]
+position = Vector2(-7.3836975, 565.68164)
+scale = Vector2(0.51183796, 0.5680521)
+
+[node name="Icon" type="Sprite2D" parent="plataformas/StaticBody2D2" unique_id=381926977]
+position = Vector2(305, 1)
+scale = Vector2(-4.8825874, 0.17107306)
+texture = ExtResource("3_svla2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plataformas/StaticBody2D2" unique_id=1203731820]
+position = Vector2(304.5, 0)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="plataformas" unique_id=400331143]
+position = Vector2(311.12875, 418.42468)
+scale = Vector2(0.9984715, 1.0017477)
+
+[node name="Icon" type="Sprite2D" parent="plataformas/StaticBody2D" unique_id=349950536]
+position = Vector2(152.80719, 0)
+rotation = 3.1415927
+scale = Vector2(2.5311036, -0.14927886)
+texture = ExtResource("3_svla2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plataformas/StaticBody2D" unique_id=2102968764]
+position = Vector2(152.50006, 0)
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="pared2" type="StaticBody2D" parent="plataformas" unique_id=486254093 groups=["Paredes"]]
+position = Vector2(181.32742, 450.48062)
+scale = Vector2(0.9984715, 1.0017477)
+
+[node name="Icon" type="Sprite2D" parent="plataformas/pared2" unique_id=1884559890]
+position = Vector2(0, -59)
+scale = Vector2(0.15723944, 1.2090889)
+texture = ExtResource("3_svla2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plataformas/pared2" unique_id=1719515643]
+position = Vector2(0, -58.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Player" parent="." unique_id=2016557864 groups=["Jugadores"] instance=ExtResource("4_bd6xm")]
+position = Vector2(65.60502, 489.69467)
+
+[node name="Player2" parent="." unique_id=1414705170 groups=["Jugadores"] instance=ExtResource("5_awcwh")]
+position = Vector2(544.60504, 312.69467)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=770576263]
+position = Vector2(-115.17605, 327.42773)
+script = ExtResource("6_gpmoe")
+
+[node name="Camera2D" type="Camera2D" parent="Node2D" unique_id=1115736316]
+zoom = Vector2(1.69, 1.69)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=101962233]
+position = Vector2(526.80524, 547.0439)
+scale = Vector2(42.91379, 0.42640585)
+script = ExtResource("2_7h81g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1929995467]
+position = Vector2(1.7036889, 177.92313)
+scale = Vector2(1.641915, 5.461148)
+shape = SubResource("RectangleShape2D_3gngh")
+debug_color = Color(0.9949911, 0, 0.22060123, 0.41960785)
+
+[connection signal="body_entered" from="Daño/daño" to="Daño/daño" method="_on_body_entered"]
+[connection signal="body_entered" from="Daño/daño2" to="Daño/daño2" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

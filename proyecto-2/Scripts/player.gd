@@ -26,7 +26,7 @@ func _physics_process(_delta: float) -> void:
 	var direction := Input.get_axis("Left","Rigth")
 	if not is_on_floor():
 		velocity.y += GRAVITY
-	if can_move :
+	if can_move == true :
 		handle_wall()
 		handle_jump()
 		if wall_lock_timer<= 0.0:
@@ -43,10 +43,13 @@ func _physics_process(_delta: float) -> void:
 			pass
 		else:
 			velocity.x = direction * SPEED
+	if can_move == false:
+		velocity.x = 0
 	move_and_slide()
 
 func morir():
-	pass
+	print ("mori")
+	get_tree().reload_current_scene()
 
 func start_dash(dir: float):
 	is_dashing = true
