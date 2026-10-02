@@ -72,6 +72,11 @@ cerrar={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="piso parte de arriba"
+2d_physics/layer_2="piso parte de abajo"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
