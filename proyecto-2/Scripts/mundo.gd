@@ -5,3 +5,9 @@ func _input(_event: InputEvent) -> void:
 		get_tree().quit()
 	elif Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
+
+
+
+
+func _ready() -> void:
+	print("hola:", $Player )
