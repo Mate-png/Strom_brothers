@@ -304,6 +304,7 @@ position = Vector2(8186, 3988.9998)
 scale = Vector2(0.6248205, 0.070522875)
 
 [node name="a" type="TileMapLayer" parent="." unique_id=1160502867]
+tile_map_data = PackedByteArray("AAASACMAAQAAAAcAAAA=")
 tile_set = SubResource("TileSet_g4v7s")
 
 [connection signal="body_entered" from="Meta" to="." method="_on_meta_body_entered"]
