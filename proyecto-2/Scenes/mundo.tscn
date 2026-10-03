@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://vdmvablmj6wt" path="res://Scenes/daño.tscn" id="5_i8avv"]
 [ext_resource type="Script" uid="uid://cv7lcrbts3bga" path="res://Scripts/camera script.gd" id="5_yf8a8"]
 [ext_resource type="PackedScene" uid="uid://bowar38bsrmnd" path="res://Scenes/deadline.tscn" id="6_qxsm7"]
+[ext_resource type="Texture2D" uid="uid://cb5kfawx645eh" path="res://Art/descarga (1).jpg" id="7_7j6if"]
 [ext_resource type="Texture2D" uid="uid://bl66ssqxchhip" path="res://Assets/2D/kenney_new-platformer-pack-1.1/Spritesheets/spritesheet-tiles-default.png" id="8_ibak7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqidu"]
@@ -279,6 +280,10 @@ position = Vector2(111, 577)
 
 [node name="Player2" parent="Jugadores" unique_id=1414705170 groups=["Jugadores"] instance=ExtResource("4_glouy")]
 position = Vector2(8399, 3973)
+
+[node name="Descarga(1)" type="Sprite2D" parent="Jugadores" unique_id=998260450]
+position = Vector2(395, 481)
+texture = ExtResource("7_7j6if")
 
 [node name="Camara" type="Node2D" parent="." unique_id=1354526862]
 script = ExtResource("5_yf8a8")
