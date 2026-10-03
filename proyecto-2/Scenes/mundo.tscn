@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://vdmvablmj6wt" path="res://Scenes/daño.tscn" id="5_i8avv"]
 [ext_resource type="Script" uid="uid://cv7lcrbts3bga" path="res://Scripts/camera script.gd" id="5_yf8a8"]
 [ext_resource type="PackedScene" uid="uid://bowar38bsrmnd" path="res://Scenes/deadline.tscn" id="6_qxsm7"]
+[ext_resource type="Texture2D" uid="uid://bl66ssqxchhip" path="res://Assets/2D/kenney_new-platformer-pack-1.1/Spritesheets/spritesheet-tiles-default.png" id="8_ibak7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqidu"]
 texture = ExtResource("2_uqtxj")
@@ -240,6 +241,19 @@ sources/0 = SubResource("TileSetAtlasSource_gqidu")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
 size = Vector2(76, 538)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7j6if"]
+texture = ExtResource("8_ibak7")
+texture_region_size = Vector2i(65, 65)
+1:7/0 = 0
+0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-20.710999, 7.0098763, -8.921661, 7.3285065, -7.965767, 32.18171, -21.66689, 32.18171)
+0:7/0/physics_layer_0/polygon_1/points = PackedVector2Array(6.691246, 7.3285065, 20.073742, 7.6471367, 20.392368, 33.774857, 7.0098763, 31.863075)
+12:6/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_g4v7s"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_7j6if")
+
 [node name="Mundo" type="Node" unique_id=118882737]
 script = ExtResource("1_i8avv")
 
@@ -277,6 +291,13 @@ position = Vector2(4936, 1156)
 position = Vector2(0, 259)
 shape = SubResource("RectangleShape2D_d0u6y")
 debug_color = Color(0.627252, 0.531469, 1.92523e-07, 0.41960785)
+
+[node name="daño2" parent="." unique_id=136542171 instance=ExtResource("5_i8avv")]
+position = Vector2(8186, 3988.9998)
+scale = Vector2(0.6248205, 0.070522875)
+
+[node name="a" type="TileMapLayer" parent="." unique_id=1160502867]
+tile_set = SubResource("TileSet_g4v7s")
 
 [connection signal="body_entered" from="Meta" to="." method="_on_meta_body_entered"]
 [connection signal="body_exited" from="Meta" to="." method="_on_meta_body_exited"]

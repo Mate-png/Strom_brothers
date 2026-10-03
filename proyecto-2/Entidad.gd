@@ -18,7 +18,6 @@ var health = 100
 var wall_coyote_timer= 0.0
 var wall_lock_timer = 0.0
 var last_wall_normal = 0.0
-var can_move: bool = true
 var is_dashing = false
 var dash_dir: Vector2 = Vector2.ZERO
 #endregion
