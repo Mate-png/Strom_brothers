@@ -7,7 +7,13 @@
 [ext_resource type="PackedScene" uid="uid://vdmvablmj6wt" path="res://Scenes/daño.tscn" id="5_i8avv"]
 [ext_resource type="Script" uid="uid://cv7lcrbts3bga" path="res://Scripts/camera script.gd" id="5_yf8a8"]
 [ext_resource type="PackedScene" uid="uid://bowar38bsrmnd" path="res://Scenes/deadline.tscn" id="6_qxsm7"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://bl66ssqxchhip" path="res://Assets/2D/kenney_new-platformer-pack-1.1/Spritesheets/spritesheet-tiles-default.png" id="8_ibak7"]
+=======
+[ext_resource type="AudioStream" uid="uid://ck7ykvf3jeqbf" path="res://Scenes/workout.ogg" id="8_ibak7"]
+[ext_resource type="Texture2D" uid="uid://j4fqnjk1a81" path="res://243 sin título_20261003111310.png" id="9_7j6if"]
+[ext_resource type="PackedScene" uid="uid://c4dxc8emy4vu5" path="res://enemigo.tscn" id="10_has1v"]
+>>>>>>> c1b29cc5bfcd389687bcab0a186ba0cce7beefcf
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqidu"]
 texture = ExtResource("2_uqtxj")
@@ -292,12 +298,30 @@ position = Vector2(0, 259)
 shape = SubResource("RectangleShape2D_d0u6y")
 debug_color = Color(0.627252, 0.531469, 1.92523e-07, 0.41960785)
 
+<<<<<<< HEAD
 [node name="daño2" parent="." unique_id=136542171 instance=ExtResource("5_i8avv")]
 position = Vector2(8186, 3988.9998)
 scale = Vector2(0.6248205, 0.070522875)
 
 [node name="a" type="TileMapLayer" parent="." unique_id=1160502867]
 tile_set = SubResource("TileSet_g4v7s")
+=======
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1760948431]
+stream = ExtResource("8_ibak7")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=908446189]
+z_index = -2
+offset_left = -1459.0
+offset_top = -806.0
+offset_right = 10136.0
+offset_bottom = 5366.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("9_7j6if")
+
+[node name="enemigos" parent="." unique_id=1536708848 instance=ExtResource("10_has1v")]
+position = Vector2(1076, 567)
+>>>>>>> c1b29cc5bfcd389687bcab0a186ba0cce7beefcf
 
 [connection signal="body_entered" from="Meta" to="." method="_on_meta_body_entered"]
 [connection signal="body_exited" from="Meta" to="." method="_on_meta_body_exited"]
