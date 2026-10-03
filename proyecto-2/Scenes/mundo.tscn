@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bowar38bsrmnd" path="res://Scenes/deadline.tscn" id="6_qxsm7"]
 [ext_resource type="AudioStream" uid="uid://ck7ykvf3jeqbf" path="res://Scenes/workout.ogg" id="8_ibak7"]
 [ext_resource type="Texture2D" uid="uid://j4fqnjk1a81" path="res://243 sin título_20261003111310.png" id="9_7j6if"]
+[ext_resource type="PackedScene" uid="uid://c4dxc8emy4vu5" path="res://enemigo.tscn" id="10_has1v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqidu"]
 texture = ExtResource("2_uqtxj")
@@ -292,6 +293,9 @@ offset_bottom = 5366.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("9_7j6if")
+
+[node name="enemigos" parent="." unique_id=1536708848 instance=ExtResource("10_has1v")]
+position = Vector2(1076, 567)
 
 [connection signal="body_entered" from="Meta" to="." method="_on_meta_body_entered"]
 [connection signal="body_exited" from="Meta" to="." method="_on_meta_body_exited"]

@@ -5,25 +5,25 @@
 [ext_resource type="Script" uid="uid://c4vo00ywdw5er" path="res://vision.gd" id="3_moxti"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
-size = Vector2(57, 46)
+size = Vector2(44, 36)
 
 [node name="enemigos" type="CharacterBody2D" unique_id=1536708848]
 script = ExtResource("1_a5tj2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1619113433]
-position = Vector2(12.500001, -4.5000024)
-scale = Vector2(0.25877193, 0.251938)
+position = Vector2(8.788379, 0.81298304)
+scale = Vector2(0.177693, 0.17548451)
 texture = ExtResource("2_moxti")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=4379625]
-position = Vector2(13.5, 1)
+position = Vector2(8, 4)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1394437925]
 target_position = Vector2(-24, 0)
 
 [node name="RayCast2D2" type="RayCast2D" parent="." unique_id=110362654]
-target_position = Vector2(49, 0)
+target_position = Vector2(40, 1)
 
 [node name="Vision" type="Area2D" parent="." unique_id=627570548]
 script = ExtResource("3_moxti")
