@@ -254,8 +254,7 @@ position = Vector2(4003, 1933.9999)
 position = Vector2(4003, 1933.9999)
 
 [node name="daño" parent="." unique_id=848684379 instance=ExtResource("5_i8avv")]
-visible = false
-position = Vector2(-99, 488.00003)
+position = Vector2(247, 601)
 
 [node name="Jugadores" type="Node" parent="." unique_id=133596501]
 
@@ -269,6 +268,7 @@ position = Vector2(8399, 3973)
 script = ExtResource("5_yf8a8")
 
 [node name="Camera2D" type="Camera2D" parent="Camara" unique_id=752966888]
+zoom = Vector2(1.145, 1.145)
 
 [node name="Meta" type="Area2D" parent="." unique_id=496366149]
 position = Vector2(4936, 1156)

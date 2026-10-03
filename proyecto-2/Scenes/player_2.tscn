@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://ufbbup5qh82x" path="res://Scripts/player_2.gd" id="1_cgts5"]
 [ext_resource type="Texture2D" uid="uid://bpabywnyy77rk" path="res://Assets/2D/kenney_new-platformer-pack-1.1/Sprites/Characters/Double/character_beige_front.png" id="2_cgts5"]
+[ext_resource type="Texture2D" uid="uid://bhhxjdn5lmnhp" path="res://Art/barra vida/p2/healt (1)_p2.png" id="3_eus2p"]
+[ext_resource type="Texture2D" uid="uid://cmc68brsr2om4" path="res://Art/barra vida/over.png" id="4_6cafw"]
+[ext_resource type="Texture2D" uid="uid://qb4yj0k47ak6" path="res://Art/barra vida/p2/healt2_p2.png" id="5_mtyrt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yf5fn"]
 radius = 12.0
@@ -48,3 +51,16 @@ scale = Vector2(0.3483166, 0.30107525)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"walk"
 autoplay = "idle"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1249292918]
+
+[node name="vida" type="TextureProgressBar" parent="CanvasLayer" unique_id=98673041]
+texture_filter = 1
+offset_left = 952.99994
+offset_top = 1.0000001
+offset_right = 1085.0
+offset_bottom = 41.0
+scale = Vector2(1.5116283, 1.5866655)
+texture_under = ExtResource("3_eus2p")
+texture_over = ExtResource("4_6cafw")
+texture_progress = ExtResource("5_mtyrt")

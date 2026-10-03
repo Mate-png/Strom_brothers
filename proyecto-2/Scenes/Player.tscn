@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cv1xprhtyuas" path="res://Scripts/player.gd" id="1_rpqav"]
 [ext_resource type="Texture2D" uid="uid://dtghf0bf7mk5w" path="res://Assets/2D/kenney_new-platformer-pack-1.1/Sprites/Characters/Default/character_green_front.png" id="2_kyqiw"]
+[ext_resource type="Texture2D" uid="uid://87hj6e00ev7i" path="res://Art/barra vida/p1/healt (1).png" id="3_5ixxa"]
+[ext_resource type="Texture2D" uid="uid://cmc68brsr2om4" path="res://Art/barra vida/over.png" id="4_nn08x"]
+[ext_resource type="Texture2D" uid="uid://2n3f4pv45jwf" path="res://Art/barra vida/p1/healt2 (1).png" id="5_52ee3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
 
@@ -15,3 +18,14 @@ texture = ExtResource("2_kyqiw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1055313647]
 shape = SubResource("CapsuleShape2D_g4v7s")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2053666151]
+
+[node name="vida" type="TextureProgressBar" parent="CanvasLayer" unique_id=823085161]
+texture_filter = 1
+offset_right = 132.0
+offset_bottom = 40.0
+scale = Vector2(1.527, 1.587)
+texture_under = ExtResource("3_5ixxa")
+texture_over = ExtResource("4_nn08x")
+texture_progress = ExtResource("5_52ee3")
