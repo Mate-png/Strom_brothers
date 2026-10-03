@@ -5,7 +5,7 @@ extends CharacterBody2D
 @onready var currentHealth: int = maxHealth
 @onready var raycastleft = $RayCast2D
 @onready var raycastright = $RayCast2D2
-const SPEED = 100
+const SPEED = 70
 var direction = 1
 
 func _physics_process(delta):

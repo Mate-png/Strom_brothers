@@ -72,7 +72,7 @@ position = Vector2(324, 315)
 position = Vector2(803, 138)
 
 [node name="enemigos" parent="." unique_id=1536708848 instance=ExtResource("4_ci3gi")]
-position = Vector2(487, 343)
+position = Vector2(493, 354)
 
 [node name="pared3" type="StaticBody2D" parent="." unique_id=1082551043 groups=["Paredes"]]
 position = Vector2(557, 370)
