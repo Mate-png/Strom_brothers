@@ -7,6 +7,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(44, 36)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+
 [node name="enemigos" type="CharacterBody2D" unique_id=1536708848]
 script = ExtResource("1_a5tj2")
 
@@ -27,5 +29,8 @@ target_position = Vector2(40, 1)
 
 [node name="Vision" type="Area2D" parent="." unique_id=627570548]
 script = ExtResource("3_moxti")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1597753559]
+sprite_frames = SubResource("SpriteFrames_g4v7s")
 
 [connection signal="body_entered" from="Vision" to="." method="_on_vision_body_entered"]
