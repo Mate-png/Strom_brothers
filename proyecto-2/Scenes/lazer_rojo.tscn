@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d2axghf2xgn46"]
+
+[ext_resource type="Texture2D" uid="uid://f1douhw6hyux" path="res://Art/sheet.png" id="1_1n2mk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g66ly"]
+size = Vector2(20, 70)
+
+[node name="Lazer_rojo" type="Node" unique_id=1567301512]
+
+[node name="lazer_1" type="Sprite2D" parent="." unique_id=993860536]
+texture_filter = 1
+texture = ExtResource("1_1n2mk")
+region_enabled = true
+region_rect = Rect2(700.08765, 350.02902, 69.91052, 69.80386)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=100582797]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=277087164]
+shape = SubResource("RectangleShape2D_g66ly")
+debug_color = Color(0.97939974, 0, 0.39222088, 0.41960785)

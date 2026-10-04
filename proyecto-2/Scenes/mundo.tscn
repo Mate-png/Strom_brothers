@@ -1,15 +1,16 @@
 [gd_scene format=4 uid="uid://dknlslj6fi6w8"]
 
-[ext_resource type="Script" uid="uid://dfjopptkxwlul" path="res://Scenes/mundo.gd" id="1_i8avv"]
+[ext_resource type="Script" uid="uid://dfjopptkxwlul" path="res://Scripts/mundo.gd" id="1_i8avv"]
 [ext_resource type="Texture2D" uid="uid://f1douhw6hyux" path="res://Art/sheet.png" id="2_uqtxj"]
 [ext_resource type="PackedScene" uid="uid://o2bjoybuhyyi" path="res://Scenes/Player.tscn" id="3_gqidu"]
 [ext_resource type="Texture2D" uid="uid://fh0lsu581ggc" path="res://Scenes/Untitled627_20261003111624.png" id="3_has1v"]
 [ext_resource type="PackedScene" uid="uid://dai3jy3ilbudu" path="res://Scenes/player_2.tscn" id="4_glouy"]
 [ext_resource type="PackedScene" uid="uid://vdmvablmj6wt" path="res://Scenes/daño.tscn" id="5_i8avv"]
-[ext_resource type="Script" uid="uid://cv7lcrbts3bga" path="res://Scripts/camera script.gd" id="5_yf8a8"]
 [ext_resource type="PackedScene" uid="uid://bowar38bsrmnd" path="res://Scenes/deadline.tscn" id="6_qxsm7"]
 [ext_resource type="Texture2D" uid="uid://cb5kfawx645eh" path="res://Art/descarga (1).jpg" id="7_7j6if"]
 [ext_resource type="Texture2D" uid="uid://bl66ssqxchhip" path="res://Assets/2D/kenney_new-platformer-pack-1.1/Spritesheets/spritesheet-tiles-default.png" id="8_ibak7"]
+[ext_resource type="PackedScene" uid="uid://bn5rujuou114e" path="res://Scenes/camara.tscn" id="9_has1v"]
+[ext_resource type="PackedScene" uid="uid://cocuxxqi7xa0g" path="res://Scenes/meta.tscn" id="10_m1vgi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqidu"]
 texture = ExtResource("2_uqtxj")
@@ -386,9 +387,6 @@ region = Rect2(143.42642, 420.93378, 66.33057, 69.598206)
 atlas = ExtResource("2_uqtxj")
 region = Rect2(3.8979225, 421.2276, 65.11484, 68.7724)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
-size = Vector2(76, 538)
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7j6if"]
 texture = ExtResource("8_ibak7")
 texture_region_size = Vector2i(65, 65)
@@ -594,29 +592,14 @@ position = Vector2(255, 576)
 
 [node name="Jugadores" type="Node" parent="." unique_id=133596501]
 
-[node name="Player" parent="Jugadores" unique_id=2016557864 groups=["Jugadores"] instance=ExtResource("3_gqidu")]
-position = Vector2(154, 292)
-
-[node name="Player2" parent="Jugadores" unique_id=1414705170 groups=["Jugadores"] instance=ExtResource("4_glouy")]
-position = Vector2(18008, 6948)
-
 [node name="Descarga(1)" type="Sprite2D" parent="Jugadores" unique_id=998260450]
 position = Vector2(-121, 440)
 texture = ExtResource("7_7j6if")
 
-[node name="Camara" type="Node2D" parent="." unique_id=1354526862]
-script = ExtResource("5_yf8a8")
+[node name="Camara" parent="." unique_id=1393843745 instance=ExtResource("9_has1v")]
 
-[node name="Camera2D" type="Camera2D" parent="Camara" unique_id=752966888]
-zoom = Vector2(1.145, 1.145)
-
-[node name="Meta" type="Area2D" parent="." unique_id=496366149]
+[node name="Meta" parent="." unique_id=19064331 instance=ExtResource("10_m1vgi")]
 position = Vector2(9739, 3207)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Meta" unique_id=1364943406]
-position = Vector2(0, 259)
-shape = SubResource("RectangleShape2D_d0u6y")
-debug_color = Color(0.627252, 0.531469, 1.92523e-07, 0.41960785)
 
 [node name="daño2" parent="." unique_id=136542171 instance=ExtResource("5_i8avv")]
 position = Vector2(8186, 3988.9998)
@@ -624,6 +607,12 @@ scale = Vector2(0.6248205, 0.070522875)
 
 [node name="a" type="TileMapLayer" parent="." unique_id=1160502867]
 tile_set = SubResource("TileSet_g4v7s")
+
+[node name="Player" parent="." unique_id=2016557864 groups=["Jugadores"] instance=ExtResource("3_gqidu")]
+position = Vector2(154, 292)
+
+[node name="Player2" parent="." unique_id=1414705170 groups=["Jugadores"] instance=ExtResource("4_glouy")]
+position = Vector2(18008, 6948)
 
 [connection signal="body_entered" from="Meta" to="." method="_on_meta_body_entered"]
 [connection signal="body_exited" from="Meta" to="." method="_on_meta_body_exited"]

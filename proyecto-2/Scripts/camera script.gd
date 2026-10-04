@@ -1,8 +1,8 @@
 extends Node2D
 
-@onready var player_1= $"../Jugadores/Player"
-@onready var player_2= $"../Jugadores/Player2"
-@onready var camera= $Camera2D
+@onready var player_1: Jugador = $"../Player"
+@onready var player_2: Jugador = $"../Player2"
+@onready var camera=$Camera2D
 
 enum PLAYER{
 	PLAYER1,

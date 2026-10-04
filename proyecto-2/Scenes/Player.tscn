@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://o2bjoybuhyyi"]
 
 [ext_resource type="Script" uid="uid://cv1xprhtyuas" path="res://Scripts/player.gd" id="1_rpqav"]
-[ext_resource type="Texture2D" uid="uid://dtghf0bf7mk5w" path="res://Assets/2D/kenney_new-platformer-pack-1.1/Sprites/Characters/Default/character_green_front.png" id="2_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://87hj6e00ev7i" path="res://Art/barra vida/p1/healt (1).png" id="3_5ixxa"]
 [ext_resource type="Texture2D" uid="uid://cmc68brsr2om4" path="res://Art/barra vida/over.png" id="4_nn08x"]
 [ext_resource type="Texture2D" uid="uid://2n3f4pv45jwf" path="res://Art/barra vida/p1/healt2 (1).png" id="5_52ee3"]
@@ -103,6 +102,11 @@ animations = [{
 "loop": 1,
 "name": &"dash",
 "speed": 30.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"ground_pound",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -287,12 +291,6 @@ animations = [{
 [node name="Player" type="CharacterBody2D" unique_id=2016557864]
 script = ExtResource("1_rpqav")
 
-[node name="CharacterGreenFront" type="Sprite2D" parent="." unique_id=1298654707]
-visible = false
-position = Vector2(0, -9)
-scale = Vector2(0.39016354, 0.38539478)
-texture = ExtResource("2_kyqiw")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1055313647]
 shape = SubResource("CapsuleShape2D_g4v7s")
 
@@ -300,7 +298,7 @@ shape = SubResource("CapsuleShape2D_g4v7s")
 position = Vector2(2.0000002, -6.999998)
 scale = Vector2(0.5540092, 0.46942636)
 sprite_frames = SubResource("SpriteFrames_5ixxa")
-animation = &"dash"
+animation = &"ground_pound"
 autoplay = "idle"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2053666151]

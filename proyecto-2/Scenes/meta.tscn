@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cocuxxqi7xa0g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
+size = Vector2(76, 538)
+
+[node name="Meta" type="Area2D" unique_id=19064331]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=804192059]
+position = Vector2(0, 259)
+shape = SubResource("RectangleShape2D_d0u6y")
+debug_color = Color(0.627252, 0.531469, 1.92523e-07, 0.41960785)

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://x0d1n5y0em3t"]
+
+[ext_resource type="Texture2D" uid="uid://f1douhw6hyux" path="res://Art/sheet.png" id="1_t27nf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(20, 70)
+
+[node name="Laze_azul" type="Node" unique_id=1657102472]
+
+[node name="lazer_1" type="Sprite2D" parent="." unique_id=986674821]
+texture_filter = 1
+texture = ExtResource("1_t27nf")
+region_enabled = true
+region_rect = Rect2(768.8994, 349.92365, 71.71643, 69.705505)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1274070392]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2140602309]
+shape = SubResource("RectangleShape2D_g4v7s")
