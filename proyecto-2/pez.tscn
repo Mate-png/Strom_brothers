@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://b1eggxok5pl5b"]
+
+[ext_resource type="Script" uid="uid://dij1n57dog7p7" path="res://pez.gd" id="1_06adi"]
+[ext_resource type="Texture2D" uid="uid://edri533w1sgv" path="res://164 sin título_20261005201859.png" id="2_31nv2"]
+[ext_resource type="Texture2D" uid="uid://cv8xjn5cma8yi" path="res://164 sin título_20261005201908.png" id="3_6rjjh"]
+[ext_resource type="Texture2D" uid="uid://bw4fnodhc0kqf" path="res://164 sin título_20261005201914.png" id="4_gaf0o"]
+[ext_resource type="Script" uid="uid://c4vo00ywdw5er" path="res://vision.gd" id="5_dxc1w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_57qmd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_31nv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6rjjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gaf0o")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(23, 9.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(23, 11.8125)
+
+[node name="enemigos" type="CharacterBody2D" unique_id=1536708848]
+script = ExtResource("1_06adi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1645239328]
+position = Vector2(0.5000001, -5.9604645e-08)
+scale = Vector2(0.099999994, 0.09565218)
+sprite_frames = SubResource("SpriteFrames_57qmd")
+frame_progress = 0.34508058
+
+[node name="RecibeDa" type="CollisionShape2D" parent="." unique_id=862591256]
+position = Vector2(0.5, -6)
+shape = SubResource("RectangleShape2D_yf5fn")
+debug_color = Color(0.9254902, 0.24313726, 0.3254902, 0.61960787)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=4379625]
+position = Vector2(0.5, 5.09375)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1394437925]
+target_position = Vector2(-24, 0)
+
+[node name="RayCast2D2" type="RayCast2D" parent="." unique_id=1260392201]
+target_position = Vector2(25, 0)
+
+[node name="Vision" type="Area2D" parent="." unique_id=627570548]
+script = ExtResource("5_dxc1w")
+
+[connection signal="body_entered" from="Vision" to="." method="_on_vision_body_entered"]

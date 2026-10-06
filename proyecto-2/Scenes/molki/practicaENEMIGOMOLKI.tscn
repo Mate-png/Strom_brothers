@@ -3,7 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bhnuq56yqibd7" path="res://icon.svg" id="1_h2yu2"]
 [ext_resource type="PackedScene" uid="uid://o2bjoybuhyyi" path="res://Scenes/Player.tscn" id="2_ygskg"]
 [ext_resource type="PackedScene" uid="uid://dai3jy3ilbudu" path="res://Scenes/player_2.tscn" id="3_aob63"]
-[ext_resource type="PackedScene" uid="uid://c4dxc8emy4vu5" path="res://enemigo.tscn" id="4_ci3gi"]
+[ext_resource type="PackedScene" uid="uid://b1eggxok5pl5b" path="res://pez.tscn" id="5_aob63"]
+[ext_resource type="PackedScene" uid="uid://c06ntngh3jpw4" path="res://enemigo2.tscn" id="5_ygskg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(20, 147)
@@ -71,8 +72,8 @@ position = Vector2(324, 315)
 [node name="Player2" parent="." unique_id=1414705170 instance=ExtResource("3_aob63")]
 position = Vector2(803, 138)
 
-[node name="enemigos" parent="." unique_id=1536708848 instance=ExtResource("4_ci3gi")]
-position = Vector2(493, 354)
+[node name="enemigos2" parent="." unique_id=86679321 instance=ExtResource("5_ygskg")]
+position = Vector2(443, 357)
 
 [node name="pared3" type="StaticBody2D" parent="." unique_id=1082551043 groups=["Paredes"]]
 position = Vector2(557, 370)
@@ -85,3 +86,6 @@ texture = ExtResource("1_h2yu2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pared3" unique_id=1080651902]
 position = Vector2(-184, -61)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="enemigos" parent="." unique_id=1536708848 instance=ExtResource("5_aob63")]
+position = Vector2(620, 190)
