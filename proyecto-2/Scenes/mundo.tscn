@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://dai3jy3ilbudu" path="res://Scenes/player_2.tscn" id="4_glouy"]
 [ext_resource type="PackedScene" uid="uid://vdmvablmj6wt" path="res://Scenes/daño.tscn" id="5_i8avv"]
 [ext_resource type="PackedScene" uid="uid://bowar38bsrmnd" path="res://Scenes/deadline.tscn" id="6_qxsm7"]
-[ext_resource type="Texture2D" uid="uid://cb5kfawx645eh" path="res://Art/descarga (1).jpg" id="7_7j6if"]
 [ext_resource type="Texture2D" uid="uid://bl66ssqxchhip" path="res://Assets/2D/kenney_new-platformer-pack-1.1/Spritesheets/spritesheet-tiles-default.png" id="8_ibak7"]
 [ext_resource type="PackedScene" uid="uid://bn5rujuou114e" path="res://Scenes/camara.tscn" id="9_has1v"]
 [ext_resource type="PackedScene" uid="uid://cocuxxqi7xa0g" path="res://Scenes/meta.tscn" id="10_m1vgi"]
@@ -590,12 +589,6 @@ position = Vector2(4003, 1933.9999)
 
 [node name="daño" parent="." unique_id=848684379 instance=ExtResource("5_i8avv")]
 position = Vector2(260.99997, 578.00006)
-
-[node name="Jugadores" type="Node" parent="." unique_id=133596501]
-
-[node name="Descarga(1)" type="Sprite2D" parent="Jugadores" unique_id=998260450]
-position = Vector2(-121, 440)
-texture = ExtResource("7_7j6if")
 
 [node name="Camara" parent="." unique_id=1393843745 instance=ExtResource("9_has1v")]
 
