@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var currentHealth: int = maxHealth
 @onready var raycastleft = $RayCast2D
 @onready var raycastright = $RayCast2D2
+const DAÑO = 25
 const SPEED = 70
 var direction = 1
 
@@ -50,8 +51,13 @@ func _on_vision_body_entered(body: Node2D) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
-
+	if body.is_in_group("Jugadores") and body.has_method("take_damage"):
+		body.take_damage(DAÑO)
 
 func _on_area_da_body_entered(body: Node2D) -> void:
 	queue_free()
+
+
+#func _on_area_da_player_body_entered(body: Node2D) -> void:
+	#if body.is_in_group("Jugadores") and body.has_method("take_damage"):
+		#body.take_damage(DAÑO)

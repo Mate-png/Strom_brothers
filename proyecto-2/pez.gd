@@ -57,3 +57,6 @@ func danio():
 func _on_vision_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		player = body
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	queue_free()
