@@ -9,6 +9,21 @@
 [ext_resource type="PackedScene" uid="uid://bnnoif2rqco1d" path="res://nodomoneda.tscn" id="6_aob63"]
 [ext_resource type="FontFile" uid="uid://bd6etsf4r5bmk" path="res://Scenes/molki/AlfaSlabOne-Regular.ttf" id="8_upwtk"]
 [ext_resource type="PackedScene" uid="uid://cjo63oem6cwju" path="res://u_iprueba_2.tscn" id="9_1ya3f"]
+[ext_resource type="Texture2D" uid="uid://bpnkf7m7w4f1s" path="res://Scenes/molki/hermano1/ani1.png" id="10_5pisc"]
+[ext_resource type="Script" uid="uid://caer3q5vjd2fj" path="res://Scenes/molki/brother1.gd" id="10_7vsw7"]
+[ext_resource type="Texture2D" uid="uid://d048fi2gj22qj" path="res://Scenes/molki/hermano1/ani2.png" id="11_htucp"]
+[ext_resource type="Texture2D" uid="uid://b75u7jm6sbftn" path="res://Scenes/molki/hermano1/ani3.png" id="12_pctau"]
+[ext_resource type="Texture2D" uid="uid://e6ddtm0q4fyr" path="res://Scenes/molki/hermano1/ani4.png" id="13_excd2"]
+[ext_resource type="Texture2D" uid="uid://7pr2ov1dispw" path="res://Scenes/molki/hermano1/ani5.png" id="14_ox304"]
+[ext_resource type="Texture2D" uid="uid://cfq5iym53y4bk" path="res://Scenes/molki/hermano1/stand1.png" id="16_icdrl"]
+[ext_resource type="Texture2D" uid="uid://b26calbjphvgl" path="res://Scenes/molki/hermano1/stand2.png" id="17_bjy0r"]
+[ext_resource type="Texture2D" uid="uid://c12gng8g0dvua" path="res://Scenes/molki/hermano1/stand3.png" id="18_76660"]
+[ext_resource type="Texture2D" uid="uid://0ksvewx3i202" path="res://Scenes/molki/hermano1/stand4.png" id="19_xfayl"]
+[ext_resource type="Texture2D" uid="uid://bstasg3h325dd" path="res://Scenes/molki/hermano1/saltar1.png" id="20_pakbf"]
+[ext_resource type="Texture2D" uid="uid://ca5c3v6blho4o" path="res://Scenes/molki/hermano1/saltar2.png" id="21_auq3c"]
+[ext_resource type="Texture2D" uid="uid://br6f5n4x620pk" path="res://Scenes/molki/hermano1/saltar3.png" id="22_nwvly"]
+[ext_resource type="Texture2D" uid="uid://bru7byahh51rj" path="res://Scenes/molki/hermano1/saltar4.png" id="23_784lj"]
+[ext_resource type="Texture2D" uid="uid://ch73bffsr2reo" path="res://Scenes/molki/hermano1/saltar5.png" id="24_ecjvv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(19, 147)
@@ -18,6 +33,74 @@ size = Vector2(629, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
 size = Vector2(325, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_5pisc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_htucp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_pctau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_excd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ox304")
+}],
+"loop": 1,
+"name": &"correr",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"frenar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_icdrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bjy0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_76660")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_xfayl")
+}],
+"loop": 1,
+"name": &"quieto",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_pakbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_auq3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_nwvly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_784lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ecjvv")
+}],
+"loop": 1,
+"name": &"saltar",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 24.083189
 
 [node name="Practica nivel" type="Node2D" unique_id=276535021]
 script = ExtResource("1_1ya3f")
@@ -109,3 +192,18 @@ theme_override_font_sizes/font_size = 30
 text = "Monedas: 0"
 
 [node name="UIprueba2" parent="." unique_id=1609471116 instance=ExtResource("9_1ya3f")]
+visible = false
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=136583654]
+script = ExtResource("10_7vsw7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=280366686]
+position = Vector2(545.875, 349)
+scale = Vector2(0.09101564, 0.092187524)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"saltar"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1467857957]
+position = Vector2(551, 352)
+shape = SubResource("CircleShape2D_g4v7s")
+debug_color = Color(0.88235295, 0.25882354, 0.13333334, 0.6509804)
