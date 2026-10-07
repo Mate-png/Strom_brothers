@@ -3,10 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://bhnuq56yqibd7" path="res://icon.svg" id="1_h2yu2"]
 [ext_resource type="PackedScene" uid="uid://o2bjoybuhyyi" path="res://Scenes/Player.tscn" id="2_ygskg"]
 [ext_resource type="PackedScene" uid="uid://dai3jy3ilbudu" path="res://Scenes/player_2.tscn" id="3_aob63"]
-[ext_resource type="PackedScene" uid="uid://c4dxc8emy4vu5" path="res://enemigo.tscn" id="4_ci3gi"]
+[ext_resource type="PackedScene" uid="uid://b1eggxok5pl5b" path="res://pez.tscn" id="5_aob63"]
+[ext_resource type="PackedScene" uid="uid://cxtpfsglbbea0" path="res://ui.tscn" id="5_ci3gi"]
+[ext_resource type="PackedScene" uid="uid://c06ntngh3jpw4" path="res://enemigo2.tscn" id="5_ygskg"]
+[ext_resource type="PackedScene" uid="uid://bnnoif2rqco1d" path="res://nodomoneda.tscn" id="6_aob63"]
+[ext_resource type="FontFile" uid="uid://bd6etsf4r5bmk" path="res://Scenes/molki/AlfaSlabOne-Regular.ttf" id="8_upwtk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
-size = Vector2(20, 147)
+size = Vector2(19, 147)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 size = Vector2(629, 20)
@@ -20,12 +24,12 @@ size = Vector2(325, 20)
 position = Vector2(557, 370)
 
 [node name="Icon" type="Sprite2D" parent="pared" unique_id=1187141733]
-position = Vector2(0, -59)
+position = Vector2(313.99997, -55)
 scale = Vector2(0.15723944, 1.2090889)
 texture = ExtResource("1_h2yu2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pared" unique_id=1005917916]
-position = Vector2(0, -63.5)
+position = Vector2(313, -65)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=740461455]
@@ -44,17 +48,17 @@ shape = SubResource("RectangleShape2D_yf5fn")
 position = Vector2(570, 243)
 
 [node name="Icon" type="Sprite2D" parent="StaticBody2D" unique_id=349950536]
-position = Vector2(152.80719, 0)
+position = Vector2(186.74771, 2.967175e-06)
 rotation = 3.1415927
-scale = Vector2(2.5311036, -0.14927886)
+scale = Vector2(2.000783, -0.14927886)
 texture = ExtResource("1_h2yu2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2102968764]
-position = Vector2(152.50006, 0)
+position = Vector2(223, -1)
 shape = SubResource("RectangleShape2D_57qmd")
 
 [node name="pared2" type="StaticBody2D" parent="." unique_id=486254093 groups=["Paredes"]]
-position = Vector2(440, 275)
+position = Vector2(436, 227)
 
 [node name="Icon" type="Sprite2D" parent="pared2" unique_id=1884559890]
 position = Vector2(0, -59)
@@ -66,22 +70,50 @@ position = Vector2(0, -63.5)
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Player" parent="." unique_id=2016557864 instance=ExtResource("2_ygskg")]
-position = Vector2(324, 315)
+position = Vector2(406, 355)
 
 [node name="Player2" parent="." unique_id=1414705170 instance=ExtResource("3_aob63")]
 position = Vector2(803, 138)
 
-[node name="enemigos" parent="." unique_id=1536708848 instance=ExtResource("4_ci3gi")]
-position = Vector2(493, 354)
+[node name="enemigos2" parent="." unique_id=86679321 instance=ExtResource("5_ygskg")]
+position = Vector2(841, 359)
 
 [node name="pared3" type="StaticBody2D" parent="." unique_id=1082551043 groups=["Paredes"]]
 position = Vector2(557, 370)
 
 [node name="Icon" type="Sprite2D" parent="pared3" unique_id=1978734913]
-position = Vector2(-183.99998, -59)
+position = Vector2(-115.00002, -57)
 scale = Vector2(0.15723944, 1.2090889)
 texture = ExtResource("1_h2yu2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pared3" unique_id=1080651902]
-position = Vector2(-184, -61)
+position = Vector2(-122, -61)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="UI" parent="." unique_id=1182622403 instance=ExtResource("5_ci3gi")]
+unique_name_in_owner = true
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 914.0
+offset_top = 9.0
+offset_right = 914.0
+offset_bottom = 9.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="enemigos" parent="." unique_id=1536708848 instance=ExtResource("5_aob63")]
+position = Vector2(354, 347)
+
+[node name="NODOMONEDA" parent="." unique_id=1570848027 instance=ExtResource("6_aob63")]
+position = Vector2(396, 197)
+
+[node name="Label" type="Label" parent="." unique_id=1618238228]
+unique_name_in_owner = true
+offset_left = 948.0
+offset_top = 16.0
+offset_right = 1136.0
+offset_bottom = 86.0
+theme_override_fonts/font = ExtResource("8_upwtk")
+theme_override_font_sizes/font_size = 30
+text = "Monedas: 0"

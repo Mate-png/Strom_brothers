@@ -288,6 +288,9 @@ animations = [{
 "speed": 30.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 15.033297
+
 [node name="Player" type="CharacterBody2D" unique_id=2016557864]
 script = ExtResource("1_rpqav")
 
@@ -312,3 +315,10 @@ scale = Vector2(1.527, 1.587)
 texture_under = ExtResource("3_5ixxa")
 texture_over = ExtResource("4_nn08x")
 texture_progress = ExtResource("5_52ee3")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2073647782]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=488694465]
+shape = SubResource("CircleShape2D_g4v7s")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

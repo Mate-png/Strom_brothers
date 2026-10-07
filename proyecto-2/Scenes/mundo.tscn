@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bl66ssqxchhip" path="res://Assets/2D/kenney_new-platformer-pack-1.1/Spritesheets/spritesheet-tiles-default.png" id="8_ibak7"]
 [ext_resource type="PackedScene" uid="uid://bn5rujuou114e" path="res://Scenes/camara.tscn" id="9_has1v"]
 [ext_resource type="PackedScene" uid="uid://cocuxxqi7xa0g" path="res://Scenes/meta.tscn" id="10_m1vgi"]
+[ext_resource type="Texture2D" uid="uid://diertjd4hwu1t" path="res://Scenes/molki/STORMBROTHERSDFONDO.png" id="12_1bodn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqidu"]
 texture = ExtResource("2_uqtxj")
@@ -587,7 +588,7 @@ position = Vector2(4003, 1933.9999)
 position = Vector2(4003, 1933.9999)
 
 [node name="daño" parent="." unique_id=848684379 instance=ExtResource("5_i8avv")]
-position = Vector2(255, 576)
+position = Vector2(260.99997, 578.00006)
 
 [node name="Camara" parent="." unique_id=1393843745 instance=ExtResource("9_has1v")]
 
@@ -606,6 +607,17 @@ position = Vector2(154, 292)
 
 [node name="Player2" parent="." unique_id=1414705170 groups=["Jugadores"] instance=ExtResource("4_glouy")]
 position = Vector2(18008, 6948)
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1729719929]
+light_mask = 2
+visibility_layer = 2
+z_index = -1
+scroll_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1615505421]
+position = Vector2(608.24994, 322)
+scale = Vector2(0.28320313, 0.29814813)
+texture = ExtResource("12_1bodn")
 
 [connection signal="body_entered" from="Meta" to="." method="_on_meta_body_entered"]
 [connection signal="body_exited" from="Meta" to="." method="_on_meta_body_exited"]

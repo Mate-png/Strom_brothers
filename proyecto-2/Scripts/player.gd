@@ -3,13 +3,14 @@ extends Jugador
 @onready var vida: TextureProgressBar = $CanvasLayer/vida
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-
+@onready var coin_label = %Label
 var can_move: bool = true
 var ground_pound_velocity = 300
-
+var coin_collected = 0
 
 func _ready() -> void:
 	vida.value = health
+	add_to_group("Jugadores")
 
 func _physics_process(_delta: float) -> void:
 	var direction := Input.get_axis("Left","Rigth")
@@ -73,3 +74,12 @@ func take_damage(cantidad):
 	vida.value = health
 	if health <= 0:
 		morir()
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("coin"):
+		set_count(coin_collected + 1)
+		print(coin_collected)
+
+func set_count(new_coin_count: int) -> void:
+	coin_collected = new_coin_count
+	coin_label.text = "Monedas: " + str(coin_collected)

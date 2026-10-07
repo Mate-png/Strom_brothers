@@ -10,6 +10,7 @@ var can_move: bool = false
 
 func _ready() -> void:
 	vida.value = health
+	add_to_group("Jugadores")
 
 
 func _physics_process(_delta: float) -> void:

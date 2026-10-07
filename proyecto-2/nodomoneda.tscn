@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bnnoif2rqco1d"]
+
+[ext_resource type="Script" uid="uid://g41sc0p5dvnt" path="res://coin.gd" id="1_ugb88"]
+[ext_resource type="Texture2D" uid="uid://b78055k7dla44" path="res://Scenes/molki/moneda rara.png" id="2_ba785"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 16.03122
+
+[node name="NODOMONEDA" type="Node2D" unique_id=1570848027]
+
+[node name="coin" type="Area2D" parent="." unique_id=1471676492 groups=["coin"]]
+script = ExtResource("1_ugb88")
+
+[node name="Sprite2D" type="Sprite2D" parent="coin" unique_id=1484894043]
+position = Vector2(-2.0861626e-06, -1.1920929e-07)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_ba785")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin" unique_id=364375406]
+shape = SubResource("CircleShape2D_g4v7s")
+debug_color = Color(0.8, 0.38431373, 0.4509804, 0.85490197)
+
+[connection signal="area_entered" from="coin" to="coin" method="_on_area_entered"]
