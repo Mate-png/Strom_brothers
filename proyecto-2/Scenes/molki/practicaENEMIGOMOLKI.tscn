@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://dpldivqrlbnac"]
 
+[ext_resource type="Script" uid="uid://7yis71uxq67k" path="res://Scenes/molki/practica_enemigomolki.gd" id="1_1ya3f"]
 [ext_resource type="Texture2D" uid="uid://bhnuq56yqibd7" path="res://icon.svg" id="1_h2yu2"]
 [ext_resource type="PackedScene" uid="uid://o2bjoybuhyyi" path="res://Scenes/Player.tscn" id="2_ygskg"]
 [ext_resource type="PackedScene" uid="uid://dai3jy3ilbudu" path="res://Scenes/player_2.tscn" id="3_aob63"]
 [ext_resource type="PackedScene" uid="uid://b1eggxok5pl5b" path="res://pez.tscn" id="5_aob63"]
-[ext_resource type="PackedScene" uid="uid://cxtpfsglbbea0" path="res://ui.tscn" id="5_ci3gi"]
 [ext_resource type="PackedScene" uid="uid://c06ntngh3jpw4" path="res://enemigo2.tscn" id="5_ygskg"]
 [ext_resource type="PackedScene" uid="uid://bnnoif2rqco1d" path="res://nodomoneda.tscn" id="6_aob63"]
 [ext_resource type="FontFile" uid="uid://bd6etsf4r5bmk" path="res://Scenes/molki/AlfaSlabOne-Regular.ttf" id="8_upwtk"]
+[ext_resource type="PackedScene" uid="uid://cjo63oem6cwju" path="res://u_iprueba_2.tscn" id="9_1ya3f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(19, 147)
@@ -19,6 +20,7 @@ size = Vector2(629, 20)
 size = Vector2(325, 20)
 
 [node name="Practica nivel" type="Node2D" unique_id=276535021]
+script = ExtResource("1_1ya3f")
 
 [node name="pared" type="StaticBody2D" parent="." unique_id=36430678 groups=["Paredes"]]
 position = Vector2(557, 370)
@@ -90,18 +92,6 @@ texture = ExtResource("1_h2yu2")
 position = Vector2(-122, -61)
 shape = SubResource("RectangleShape2D_g4v7s")
 
-[node name="UI" parent="." unique_id=1182622403 instance=ExtResource("5_ci3gi")]
-unique_name_in_owner = true
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 914.0
-offset_top = 9.0
-offset_right = 914.0
-offset_bottom = 9.0
-grow_horizontal = 1
-grow_vertical = 1
-
 [node name="enemigos" parent="." unique_id=1536708848 instance=ExtResource("5_aob63")]
 position = Vector2(354, 347)
 
@@ -117,3 +107,5 @@ offset_bottom = 86.0
 theme_override_fonts/font = ExtResource("8_upwtk")
 theme_override_font_sizes/font_size = 30
 text = "Monedas: 0"
+
+[node name="UIprueba2" parent="." unique_id=1609471116 instance=ExtResource("9_1ya3f")]

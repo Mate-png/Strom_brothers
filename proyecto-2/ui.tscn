@@ -1,5 +1,74 @@
 [gd_scene format=3 uid="uid://cxtpfsglbbea0"]
 
+[ext_resource type="Script" uid="uid://bj147er7xrh3r" path="res://ui.gd" id="1_27fn8"]
+[ext_resource type="Texture2D" uid="uid://cb5kfawx645eh" path="res://Art/descarga (1).jpg" id="1_fyqef"]
+[ext_resource type="Script" uid="uid://csw5ydryiu6cs" path="res://animation_player.gd" id="2_m6e0p"]
+
+[sub_resource type="Animation" id="Animation_m6e0p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1.5, 181.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_27fn8"]
+resource_name = "new_animation"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666666, 5, 8.066667, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-2, 672), Vector2(-7, 192), Vector2(-7, 192), Vector2(-7, -297)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("Label:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.01, 2.01, 5, 12.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_nltto"]
+resource_name = "new_animation_2"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ibotj"]
+_data = {
+&"RESET": SubResource("Animation_m6e0p"),
+&"new_animation": SubResource("Animation_27fn8"),
+&"new_animation_2": SubResource("Animation_nltto")
+}
+
 [node name="UI" type="Control" unique_id=1182622403]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +76,48 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_27fn8")
+
+[node name="Label" type="Label" parent="." unique_id=1207770268]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.5
+offset_top = -466.5
+offset_right = 16.5
+offset_bottom = -181.49829
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "EN UNA GALAXIA MUY LEJANA...
+DOS HERMANOS QUEDAN VARADOS EN MARTE, SIN SABER QUÉ HACER...
+¡AYÚDALOS A VOLVER A LA TIERRA!"
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Label" unique_id=1941660720]
+texture = ExtResource("1_fyqef")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label" unique_id=1596740716]
+unique_name_in_owner = true
+process_mode = 3
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_ibotj")
+script = ExtResource("2_m6e0p")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=453343048]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[connection signal="animation_finished" from="Label/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="Label/AnimationPlayer" to="Label/AnimationPlayer" method="_on_animation_finished"]

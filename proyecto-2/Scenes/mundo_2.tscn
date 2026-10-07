@@ -1,6 +1,5 @@
 [gd_scene format=4 uid="uid://5xanfu65hlrv"]
 
-[ext_resource type="Script" path="res://Scenes/mundo.gd" id="1_ln8b6"]
 [ext_resource type="Texture2D" uid="uid://f1douhw6hyux" path="res://Art/sheet.png" id="1_v0xyi"]
 [ext_resource type="PackedScene" uid="uid://o2bjoybuhyyi" path="res://Scenes/Player.tscn" id="2_wpx2e"]
 [ext_resource type="PackedScene" uid="uid://dai3jy3ilbudu" path="res://Scenes/player_2.tscn" id="3_b88mh"]
@@ -166,7 +165,6 @@ atlas = ExtResource("1_v0xyi")
 region = Rect2(0, 421.1273, 70.92206, 68.87271)
 
 [node name="Mundo2" type="Node" unique_id=403033546]
-script = ExtResource("1_ln8b6")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1570474496]
 
