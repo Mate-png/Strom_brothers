@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dfklsyy13rp8b" path="res://Scenes/molki/TileSheet-v1.png" id="1_m3qg4"]
 [ext_resource type="Texture2D" uid="uid://bqaubpfqen0lv" path="res://Art/finalbetah.png" id="2_skdcu"]
+[ext_resource type="Texture2D" uid="uid://n3ydbaotwspx" path="res://Scenes/166 sin título.png" id="3_bpa6w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_skdcu"]
 texture = ExtResource("1_m3qg4")
@@ -87,6 +88,20 @@ texture_region_size = Vector2i(35, 35)
 [sub_resource type="TileSet" id="TileSet_v1o4u"]
 sources/0 = SubResource("TileSetAtlasSource_skdcu")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_bpa6w")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
+radius = 49.010204
+
 [node name="Mundo3" type="Node" unique_id=398680409]
 
 [node name="piso" type="TileMapLayer" parent="." unique_id=596536980]
@@ -103,3 +118,15 @@ scroll_scale = Vector2(0, 0)
 position = Vector2(608.24994, 322)
 scale = Vector2(0.28320313, 0.29814813)
 texture = ExtResource("2_skdcu")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=582358684]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1448045169]
+position = Vector2(577, 161)
+scale = Vector2(0.13549998, 0.1265)
+sprite_frames = SubResource("SpriteFrames_yf5fn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=711234133]
+position = Vector2(583, 161)
+shape = SubResource("CircleShape2D_g4v7s")
+debug_color = Color(0.42352942, 0.6039216, 0.12156863, 0.6901961)
