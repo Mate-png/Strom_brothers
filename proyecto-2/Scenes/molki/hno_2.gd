@@ -9,15 +9,17 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ui_right"):
 		_animated_sprite.play("correr")
 		$AnimatedSprite2D.flip_h = false
-	else:
-		_animated_sprite.play("stand")
 		
-	if Input.is_action_pressed("ui_accept"):
-		_animated_sprite.play("saltar")
+	#if Input.is_action_pressed("ui_accept"):
+		#_animated_sprite.play("saltar")
+	if(Input.is_anything_pressed()==false):
+		_animated_sprite.play("stand")
 		
 	if Input.is_action_pressed("ui_left"):
 		_animated_sprite.flip_h = true
-		_animated_sprite.play("correr")		
+		_animated_sprite.play("correr")
+	
+		
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta

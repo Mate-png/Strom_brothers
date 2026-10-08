@@ -21,15 +21,18 @@
 [ext_resource type="Texture2D" uid="uid://0ksvewx3i202" path="res://Scenes/molki/hermano1/stand4.png" id="19_xfayl"]
 [ext_resource type="Texture2D" uid="uid://bstasg3h325dd" path="res://Scenes/molki/hermano1/saltar1.png" id="20_pakbf"]
 [ext_resource type="Texture2D" uid="uid://ca5c3v6blho4o" path="res://Scenes/molki/hermano1/saltar2.png" id="21_auq3c"]
-[ext_resource type="Texture2D" uid="uid://br6f5n4x620pk" path="res://Scenes/molki/hermano1/saltar3.png" id="22_nwvly"]
-[ext_resource type="Texture2D" uid="uid://bru7byahh51rj" path="res://Scenes/molki/hermano1/saltar4.png" id="23_784lj"]
-[ext_resource type="Texture2D" uid="uid://ch73bffsr2reo" path="res://Scenes/molki/hermano1/saltar5.png" id="24_ecjvv"]
+[ext_resource type="Texture2D" uid="uid://dgve75x0jo86c" path="res://Scenes/molki/hermano1/saltar33.png" id="22_ecjvv"]
 [ext_resource type="Script" uid="uid://poe7aenfpy7l" path="res://Scenes/molki/hno_2.gd" id="25_icdrl"]
 [ext_resource type="Texture2D" uid="uid://w8w4mysqs770" path="res://Scenes/molki/hermano2/hno2stand1.png" id="26_auq3c"]
+[ext_resource type="Texture2D" uid="uid://eo5mwf3dkkvd" path="res://Scenes/molki/hermano2/hno2correr1.png" id="26_eos2f"]
+[ext_resource type="Texture2D" uid="uid://iydymbk0uo61" path="res://Scenes/molki/hermano2/hno2correr2.png" id="27_bpmc0"]
 [ext_resource type="Texture2D" uid="uid://bhey77gsxaq47" path="res://Scenes/molki/hermano2/hno2stand2.png" id="27_nwvly"]
+[ext_resource type="Texture2D" uid="uid://cenrv75p146kq" path="res://Scenes/molki/hermano2/hno2correr3.png" id="28_61r3a"]
 [ext_resource type="Texture2D" uid="uid://bwe4q5cml0pm0" path="res://Scenes/molki/hermano2/hno2stand3.png" id="28_784lj"]
+[ext_resource type="Texture2D" uid="uid://cfvp2wnlqe4v4" path="res://Scenes/molki/hermano2/hno2correr4.png" id="29_crig7"]
 [ext_resource type="Texture2D" uid="uid://j57c7eafno86" path="res://Scenes/molki/hermano2/hno2stand4.png" id="29_ecjvv"]
 [ext_resource type="Texture2D" uid="uid://2eib8b0kc3i8" path="res://Scenes/molki/hermano2/hno2stand5.png" id="30_bclci"]
+[ext_resource type="Texture2D" uid="uid://bt4cfywa6imp5" path="res://Scenes/molki/hermano2/hno2correr5.png" id="30_ibr2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(19, 147)
@@ -92,17 +95,11 @@ animations = [{
 "texture": ExtResource("21_auq3c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("22_nwvly")
-}, {
-"duration": 1.0,
-"texture": ExtResource("23_784lj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_ecjvv")
+"texture": ExtResource("22_ecjvv")
 }],
 "loop": 1,
 "name": &"saltar",
-"speed": 8.0
+"speed": 7.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
@@ -110,6 +107,26 @@ radius = 28.114714
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_57qmd"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_eos2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_bpmc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_61r3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_crig7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_ibr2h")
+}],
+"loop": 1,
+"name": &"correr",
+"speed": 9.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("26_auq3c")
@@ -237,6 +254,7 @@ position = Vector2(-2, 1)
 scale = Vector2(0.09101564, 0.092187524)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"saltar"
+frame_progress = 0.8080366
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1467857957]
 position = Vector2(-2, 2)
@@ -252,8 +270,8 @@ script = ExtResource("25_icdrl")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HNO2" unique_id=1449876626]
 scale = Vector2(0.09648453, 0.09178574)
 sprite_frames = SubResource("SpriteFrames_57qmd")
-animation = &"stand"
-frame_progress = 0.6736485
+animation = &"correr"
+frame_progress = 0.4165093
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HNO2" unique_id=1306696033]
 position = Vector2(-1, 0)
