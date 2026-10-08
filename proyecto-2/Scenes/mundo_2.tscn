@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://fh0lsu581ggc" path="res://Scenes/Untitled627_20261003111624.png" id="4_ln8b6"]
 [ext_resource type="PackedScene" uid="uid://bn5rujuou114e" path="res://Scenes/camara.tscn" id="6_nc1a4"]
 [ext_resource type="PackedScene" uid="uid://cocuxxqi7xa0g" path="res://Scenes/meta.tscn" id="7_xwghw"]
-[ext_resource type="Texture2D" uid="uid://boxtqsc4ku4km" path="res://Art/nivel 2.png" id="8_7u73v"]
+[ext_resource type="Texture2D" uid="uid://sdc5cmb4vjcx" path="res://Art/ce.png" id="8_7u73v"]
 [ext_resource type="Texture2D" uid="uid://ckq50g2l1awoe" path="res://Art/sheetice.png" id="8_vkmco"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b88mh"]
