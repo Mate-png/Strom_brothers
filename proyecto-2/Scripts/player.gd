@@ -3,7 +3,7 @@ extends Jugador
 @onready var vida: TextureProgressBar = $CanvasLayer/vida
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var coin_label = %Label
+var coin_label: Label
 var can_move: bool = true
 var ground_pound_velocity = 300
 var coin_collected = 0
@@ -11,7 +11,9 @@ var coin_collected = 0
 func _ready() -> void:
 	vida.value = health
 	add_to_group("Jugadores")
-
+	coin_label = get_tree().current_scene.find_child("Label", true, false) as Label
+	if coin_label:
+		coin_label.text = "Monedas: " + str(coin_collected)
 func _physics_process(_delta: float) -> void:
 	var direction := Input.get_axis("Left","Rigth")
 	if not is_on_floor():

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cxtpfsglbbea0"]
 
 [ext_resource type="Script" uid="uid://bj147er7xrh3r" path="res://ui.gd" id="1_27fn8"]
-[ext_resource type="Texture2D" uid="uid://cb5kfawx645eh" path="res://Art/descarga (1).jpg" id="1_fyqef"]
 [ext_resource type="Script" uid="uid://csw5ydryiu6cs" path="res://animation_player.gd" id="2_m6e0p"]
+[ext_resource type="FontFile" uid="uid://bd6etsf4r5bmk" path="res://Scenes/molki/AlfaSlabOne-Regular.ttf" id="2_nltto"]
 
 [sub_resource type="Animation" id="Animation_m6e0p"]
 length = 0.001
@@ -87,10 +87,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -1.5
 offset_top = -466.5
-offset_right = 16.5
+offset_right = -1.0
 offset_bottom = -181.49829
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_nltto")
 theme_override_font_sizes/font_size = 50
 text = "EN UNA GALAXIA MUY LEJANA...
 DOS HERMANOS QUEDAN VARADOS EN MARTE, SIN SABER QUÉ HACER...
@@ -98,9 +99,6 @@ DOS HERMANOS QUEDAN VARADOS EN MARTE, SIN SABER QUÉ HACER...
 horizontal_alignment = 1
 vertical_alignment = 3
 autowrap_mode = 2
-
-[node name="Sprite2D" type="Sprite2D" parent="Label" unique_id=1941660720]
-texture = ExtResource("1_fyqef")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Label" unique_id=1596740716]
 unique_name_in_owner = true

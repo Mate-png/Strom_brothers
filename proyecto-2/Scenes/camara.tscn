@@ -1,9 +1,26 @@
 [gd_scene format=3 uid="uid://bn5rujuou114e"]
 
 [ext_resource type="Script" uid="uid://cv7lcrbts3bga" path="res://Scripts/camera script.gd" id="1_d8ueh"]
+[ext_resource type="FontFile" uid="uid://bd6etsf4r5bmk" path="res://Scenes/molki/AlfaSlabOne-Regular.ttf" id="2_hrmxv"]
 
 [node name="Camara" type="Node2D" unique_id=1393843745]
 script = ExtResource("1_d8ueh")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=354594807]
 zoom = Vector2(1.145, 1.145)
+
+[node name="Label" type="Label" parent="Camera2D" unique_id=1405165684]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 300.0
+offset_top = -262.0
+offset_right = 488.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_hrmxv")
+theme_override_font_sizes/font_size = 30
+text = "Monedas: 0"
