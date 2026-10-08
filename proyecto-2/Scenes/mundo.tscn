@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bl66ssqxchhip" path="res://Assets/2D/kenney_new-platformer-pack-1.1/Spritesheets/spritesheet-tiles-default.png" id="8_ibak7"]
 [ext_resource type="PackedScene" uid="uid://bn5rujuou114e" path="res://Scenes/camara.tscn" id="9_has1v"]
 [ext_resource type="PackedScene" uid="uid://cocuxxqi7xa0g" path="res://Scenes/meta.tscn" id="10_m1vgi"]
-[ext_resource type="Texture2D" uid="uid://diertjd4hwu1t" path="res://Scenes/molki/STORMBROTHERSDFONDO.png" id="12_1bodn"]
+[ext_resource type="Texture2D" uid="uid://cbcm6vanlgt6j" path="res://Art/n23.png" id="11_m1vgi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqidu"]
 texture = ExtResource("2_uqtxj")
@@ -617,7 +617,7 @@ scroll_scale = Vector2(0, 0)
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1615505421]
 position = Vector2(608.24994, 322)
 scale = Vector2(0.28320313, 0.29814813)
-texture = ExtResource("12_1bodn")
+texture = ExtResource("11_m1vgi")
 
 [connection signal="body_entered" from="Meta" to="." method="_on_meta_body_entered"]
 [connection signal="body_exited" from="Meta" to="." method="_on_meta_body_exited"]

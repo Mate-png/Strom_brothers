@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://fh0lsu581ggc" path="res://Scenes/Untitled627_20261003111624.png" id="4_ln8b6"]
 [ext_resource type="PackedScene" uid="uid://bn5rujuou114e" path="res://Scenes/camara.tscn" id="6_nc1a4"]
 [ext_resource type="PackedScene" uid="uid://cocuxxqi7xa0g" path="res://Scenes/meta.tscn" id="7_xwghw"]
+[ext_resource type="Texture2D" uid="uid://boxtqsc4ku4km" path="res://Art/nivel 2.png" id="8_7u73v"]
 [ext_resource type="Texture2D" uid="uid://ckq50g2l1awoe" path="res://Art/sheetice.png" id="8_vkmco"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b88mh"]
@@ -411,6 +412,17 @@ texture = SubResource("AtlasTexture_25bs2")
 [node name="Interruptor rojo5" type="Sprite2D" parent="." unique_id=671766480]
 position = Vector2(13868, -2007)
 texture = SubResource("AtlasTexture_25bs2")
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1070531708]
+light_mask = 2
+visibility_layer = 2
+z_index = -1
+scroll_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=737261665]
+position = Vector2(608.24994, 322)
+scale = Vector2(0.28320313, 0.29814813)
+texture = ExtResource("8_7u73v")
 
 [connection signal="body_entered" from="Meta" to="." method="_on_meta_body_entered"]
 [connection signal="body_exited" from="Meta" to="." method="_on_meta_body_exited"]
