@@ -19,9 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://b26calbjphvgl" path="res://Scenes/molki/hermano1/stand2.png" id="17_bjy0r"]
 [ext_resource type="Texture2D" uid="uid://c12gng8g0dvua" path="res://Scenes/molki/hermano1/stand3.png" id="18_76660"]
 [ext_resource type="Texture2D" uid="uid://0ksvewx3i202" path="res://Scenes/molki/hermano1/stand4.png" id="19_xfayl"]
-[ext_resource type="Texture2D" uid="uid://bstasg3h325dd" path="res://Scenes/molki/hermano1/saltar1.png" id="20_pakbf"]
-[ext_resource type="Texture2D" uid="uid://ca5c3v6blho4o" path="res://Scenes/molki/hermano1/saltar2.png" id="21_auq3c"]
-[ext_resource type="Texture2D" uid="uid://dgve75x0jo86c" path="res://Scenes/molki/hermano1/saltar33.png" id="22_ecjvv"]
+[ext_resource type="Texture2D" uid="uid://biiqwbyt7v7xq" path="res://Scenes/molki/hermano1/salto1.png" id="20_784lj"]
 [ext_resource type="Script" uid="uid://poe7aenfpy7l" path="res://Scenes/molki/hno_2.gd" id="25_icdrl"]
 [ext_resource type="Texture2D" uid="uid://w8w4mysqs770" path="res://Scenes/molki/hermano2/hno2stand1.png" id="26_auq3c"]
 [ext_resource type="Texture2D" uid="uid://eo5mwf3dkkvd" path="res://Scenes/molki/hermano2/hno2correr1.png" id="26_eos2f"]
@@ -90,13 +88,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("20_pakbf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_auq3c")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_ecjvv")
+"texture": ExtResource("20_784lj")
 }],
 "loop": 1,
 "name": &"saltar",
