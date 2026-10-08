@@ -1,3 +1,40 @@
 [gd_scene format=3 uid="uid://bdarsg1qn05ti"]
 
+[ext_resource type="Script" uid="uid://iiwoi1u6s3ur" path="res://Scenes/menu.gd" id="1_cayip"]
+[ext_resource type="Texture2D" uid="uid://d0sttfat7uj4a" path="res://Art/STORM_BROTHERS.png" id="1_xhh6f"]
+[ext_resource type="Texture2D" uid="uid://b8a57f5rj7um1" path="res://Art/buttonstest.png" id="2_cayip"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwsa2"]
+atlas = ExtResource("2_cayip")
+
+[sub_resource type="LabelSettings" id="LabelSettings_xrivr"]
+font_size = 50
+
 [node name="Menu" type="Node" unique_id=2100610947]
+script = ExtResource("1_cayip")
+
+[node name="StormBrothers" type="Sprite2D" parent="." unique_id=1743288318]
+position = Vector2(578, 325)
+scale = Vector2(0.5703125, 0.57465273)
+texture = ExtResource("1_xhh6f")
+
+[node name="Button" type="Button" parent="StormBrothers" unique_id=1166084562]
+offset_left = -217.42465
+offset_top = 104.41087
+offset_right = 220.57535
+offset_bottom = 332.4109
+icon = SubResource("AtlasTexture_wwsa2")
+flat = true
+
+[node name="Label" type="Label" parent="StormBrothers/Button" unique_id=1977534570]
+layout_mode = 0
+offset_left = 47.342453
+offset_top = 31.32325
+offset_right = 398.0274
+offset_bottom = 184.45923
+text = "Jugar"
+label_settings = SubResource("LabelSettings_xrivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="StormBrothers/Button" to="." method="_on_button_pressed"]
