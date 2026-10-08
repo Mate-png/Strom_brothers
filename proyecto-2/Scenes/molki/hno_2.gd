@@ -10,8 +10,8 @@ func _physics_process(delta: float) -> void:
 		_animated_sprite.play("correr")
 		$AnimatedSprite2D.flip_h = false
 		
-	#if Input.is_action_pressed("ui_accept"):
-		#_animated_sprite.play("saltar")
+	if Input.is_action_pressed("ui_accept"):
+		_animated_sprite.play("saltar")
 	if(Input.is_anything_pressed()==false):
 		_animated_sprite.play("stand")
 		

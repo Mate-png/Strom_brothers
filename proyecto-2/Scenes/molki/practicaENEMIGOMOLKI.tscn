@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://bhey77gsxaq47" path="res://Scenes/molki/hermano2/hno2stand2.png" id="27_nwvly"]
 [ext_resource type="Texture2D" uid="uid://cenrv75p146kq" path="res://Scenes/molki/hermano2/hno2correr3.png" id="28_61r3a"]
 [ext_resource type="Texture2D" uid="uid://bwe4q5cml0pm0" path="res://Scenes/molki/hermano2/hno2stand3.png" id="28_784lj"]
+[ext_resource type="Texture2D" uid="uid://bu5lyut0erguq" path="res://Scenes/molki/hermano2/h2salto.png" id="29_bclci"]
 [ext_resource type="Texture2D" uid="uid://cfvp2wnlqe4v4" path="res://Scenes/molki/hermano2/hno2correr4.png" id="29_crig7"]
 [ext_resource type="Texture2D" uid="uid://j57c7eafno86" path="res://Scenes/molki/hermano2/hno2stand4.png" id="29_ecjvv"]
 [ext_resource type="Texture2D" uid="uid://2eib8b0kc3i8" path="res://Scenes/molki/hermano2/hno2stand5.png" id="30_bclci"]
@@ -126,6 +127,14 @@ animations = [{
 "loop": 1,
 "name": &"correr",
 "speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_bclci")
+}],
+"loop": 1,
+"name": &"saltar",
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -254,7 +263,6 @@ position = Vector2(-2, 1)
 scale = Vector2(0.09101564, 0.092187524)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"saltar"
-frame_progress = 0.8080366
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1467857957]
 position = Vector2(-2, 2)
@@ -270,8 +278,7 @@ script = ExtResource("25_icdrl")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HNO2" unique_id=1449876626]
 scale = Vector2(0.09648453, 0.09178574)
 sprite_frames = SubResource("SpriteFrames_57qmd")
-animation = &"correr"
-frame_progress = 0.4165093
+animation = &"saltar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HNO2" unique_id=1306696033]
 position = Vector2(-1, 0)
