@@ -24,6 +24,12 @@
 [ext_resource type="Texture2D" uid="uid://br6f5n4x620pk" path="res://Scenes/molki/hermano1/saltar3.png" id="22_nwvly"]
 [ext_resource type="Texture2D" uid="uid://bru7byahh51rj" path="res://Scenes/molki/hermano1/saltar4.png" id="23_784lj"]
 [ext_resource type="Texture2D" uid="uid://ch73bffsr2reo" path="res://Scenes/molki/hermano1/saltar5.png" id="24_ecjvv"]
+[ext_resource type="Script" uid="uid://poe7aenfpy7l" path="res://Scenes/molki/hno_2.gd" id="25_icdrl"]
+[ext_resource type="Texture2D" uid="uid://w8w4mysqs770" path="res://Scenes/molki/hermano2/hno2stand1.png" id="26_auq3c"]
+[ext_resource type="Texture2D" uid="uid://bhey77gsxaq47" path="res://Scenes/molki/hermano2/hno2stand2.png" id="27_nwvly"]
+[ext_resource type="Texture2D" uid="uid://bwe4q5cml0pm0" path="res://Scenes/molki/hermano2/hno2stand3.png" id="28_784lj"]
+[ext_resource type="Texture2D" uid="uid://j57c7eafno86" path="res://Scenes/molki/hermano2/hno2stand4.png" id="29_ecjvv"]
+[ext_resource type="Texture2D" uid="uid://2eib8b0kc3i8" path="res://Scenes/molki/hermano2/hno2stand5.png" id="30_bclci"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(19, 147)
@@ -100,7 +106,33 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
-radius = 24.083189
+radius = 28.114714
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_57qmd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_auq3c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_nwvly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_784lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ecjvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_bclci")
+}],
+"loop": 1,
+"name": &"stand",
+"speed": 9.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yf5fn"]
+radius = 29.427877
 
 [node name="Practica nivel" type="Node2D" unique_id=276535021]
 script = ExtResource("1_1ya3f")
@@ -190,20 +222,41 @@ offset_bottom = 86.0
 theme_override_fonts/font = ExtResource("8_upwtk")
 theme_override_font_sizes/font_size = 30
 text = "Monedas: 0"
+metadata/_edit_use_anchors_ = true
 
 [node name="UIprueba2" parent="." unique_id=1609471116 instance=ExtResource("9_1ya3f")]
 visible = false
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=136583654]
+position = Vector2(485, 144)
+scale = Vector2(1.21, 1.1)
 script = ExtResource("10_7vsw7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=280366686]
-position = Vector2(545.875, 349)
+position = Vector2(-2, 1)
 scale = Vector2(0.09101564, 0.092187524)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"saltar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1467857957]
-position = Vector2(551, 352)
+position = Vector2(-2, 2)
+scale = Vector2(1.1, 1.1)
 shape = SubResource("CircleShape2D_g4v7s")
 debug_color = Color(0.88235295, 0.25882354, 0.13333334, 0.6509804)
+
+[node name="HNO2" type="CharacterBody2D" parent="." unique_id=1997038329]
+position = Vector2(562, 145)
+scale = Vector2(1.1, 1.1)
+script = ExtResource("25_icdrl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HNO2" unique_id=1449876626]
+scale = Vector2(0.09648453, 0.09178574)
+sprite_frames = SubResource("SpriteFrames_57qmd")
+animation = &"stand"
+frame_progress = 0.6736485
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HNO2" unique_id=1306696033]
+position = Vector2(-1, 0)
+scale = Vector2(1.1, 1.1)
+shape = SubResource("CircleShape2D_yf5fn")
+debug_color = Color(0.4509132, 0.4002892, 0.461025, 0.83137256)

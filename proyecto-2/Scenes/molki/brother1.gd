@@ -12,14 +12,13 @@ func _physics_process(delta: float) -> void:
 	else:
 		_animated_sprite.play("quieto")
 		
+	if Input.is_action_pressed("ui_left"):
+		_animated_sprite.play("correr")	
+		_animated_sprite.flip_h = true	
+		
 	if Input.is_action_pressed("ui_accept"):
 		_animated_sprite.play("saltar")
 		
-	if Input.is_action_pressed("ui_left"):
-		_animated_sprite.flip_h = true
-		_animated_sprite.play("correr")		
-		
-
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
