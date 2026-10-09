@@ -58,6 +58,9 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("2_avx33")
+}, {
+"duration": 1.0,
 "texture": ExtResource("7_hkrn1")
 }, {
 "duration": 1.0,
@@ -113,8 +116,8 @@ shape = SubResource("CircleShape2D_g4v7s")
 debug_color = Color(0.79065764, 0.42914754, 3.85046e-07, 0.41960785)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=823471147]
-position = Vector2(0, -2.0000002)
-scale = Vector2(0.055125, 0.04908036)
+position = Vector2(0, -2.6471431)
+scale = Vector2(0.055125, 0.051102683)
 sprite_frames = SubResource("SpriteFrames_5ixxa")
 animation = &"dash"
 autoplay = "idle"
