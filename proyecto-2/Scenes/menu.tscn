@@ -1,13 +1,17 @@
 [gd_scene format=3 uid="uid://bdarsg1qn05ti"]
 
 [ext_resource type="Script" uid="uid://iiwoi1u6s3ur" path="res://Scripts/menu.gd" id="1_cayip"]
+[ext_resource type="Texture2D" uid="uid://ry56a63mhiak" path="res://Scenes/molki/portadax.png" id="2_jsrd8"]
 [ext_resource type="Texture2D" uid="uid://dg8qq4fgk6gjy" path="res://Art/ui/PNG/You_Win/Table.png" id="3_158mb"]
 [ext_resource type="FontFile" uid="uid://bd6etsf4r5bmk" path="res://Scenes/molki/AlfaSlabOne-Regular.ttf" id="4_158mb"]
 [ext_resource type="Texture2D" uid="uid://cgd3yuhullrbi" path="res://Art/silueta.png" id="4_wwsa2"]
 [ext_resource type="Texture2D" uid="uid://bs3qe07a8hbjo" path="res://Art/titulo.png" id="5_wwsa2"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_13qdw"]
+atlas = ExtResource("2_jsrd8")
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_wbdvm"]
-atlas = ExtResource("4_wwsa2")
+atlas = SubResource("AtlasTexture_13qdw")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6swd7"]
 atlas = ExtResource("3_158mb")
@@ -17,7 +21,7 @@ font = ExtResource("4_158mb")
 font_size = 50
 
 [sub_resource type="Animation" id="Animation_cayip"]
-length = 0.001
+length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
