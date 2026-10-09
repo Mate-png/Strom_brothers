@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bnnoif2rqco1d"]
 
-[ext_resource type="Script" uid="uid://g41sc0p5dvnt" path="res://coin.gd" id="1_ugb88"]
+[ext_resource type="Script" uid="uid://g41sc0p5dvnt" path="res://Scripts/coin.gd" id="1_ugb88"]
 [ext_resource type="Texture2D" uid="uid://b78055k7dla44" path="res://Scenes/molki/moneda rara.png" id="2_ba785"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cjo63oem6cwju"]
 
-[ext_resource type="Script" uid="uid://ohme7sy0qvt1" path="res://color_rect.gd" id="1_l2byl"]
-[ext_resource type="Script" uid="uid://ddbhqese8trsv" path="res://u_iprueba_2.gd" id="1_o8pwa"]
+[ext_resource type="Script" uid="uid://ohme7sy0qvt1" path="res://Scripts/color_rect.gd" id="1_l2byl"]
+[ext_resource type="Script" uid="uid://ddbhqese8trsv" path="res://Scripts/u_iprueba_2.gd" id="1_o8pwa"]
 
 [node name="UIprueba2" type="Control" unique_id=1609471116]
 layout_mode = 3

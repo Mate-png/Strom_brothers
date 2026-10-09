@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cxtpfsglbbea0"]
 
-[ext_resource type="Script" uid="uid://bj147er7xrh3r" path="res://ui.gd" id="1_27fn8"]
-[ext_resource type="Script" uid="uid://csw5ydryiu6cs" path="res://animation_player.gd" id="2_m6e0p"]
+[ext_resource type="Script" uid="uid://bj147er7xrh3r" path="res://Scripts/ui.gd" id="1_27fn8"]
+[ext_resource type="Script" uid="uid://csw5ydryiu6cs" path="res://Scripts/animation_player.gd" id="2_m6e0p"]
 [ext_resource type="FontFile" uid="uid://bd6etsf4r5bmk" path="res://Scenes/molki/AlfaSlabOne-Regular.ttf" id="2_nltto"]
 
 [sub_resource type="Animation" id="Animation_m6e0p"]

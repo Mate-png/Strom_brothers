@@ -45,7 +45,15 @@ func _physics_process(_delta: float) -> void:
 		canvas_layer.visible =false
 		velocity.x = 0
 		sprite.play("idle")
+
 	move_and_slide()
+	
+	for i in get_slide_collision_count():
+		var colision = get_slide_collision(i)
+		var colider = colision.get_collider()
+		if colider is TileMapLayer and colider.name == "Pinchos":
+			morir()
+
 
 
 func ground_pound():
@@ -92,7 +100,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		gain_life()
 
 func gain_life():
-	vida.value += 1
+	vida.value += 25
 
 func set_count(new_coin_count: int) -> void:
 	coin_collected = new_coin_count
