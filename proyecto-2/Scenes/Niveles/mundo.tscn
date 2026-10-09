@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://buu5rq5v608st" path="res://Scenes/obstaculos/cañones/cañon_top.tscn" id="15_j2o5r"]
 [ext_resource type="PackedScene" uid="uid://bmifuqyfc3dsv" path="res://Scenes/obstaculos/cañones/cañon_down.tscn" id="16_ctm0j"]
 [ext_resource type="PackedScene" uid="uid://ocklhpb02ryu" path="res://Scenes/obstaculos/cañones/cañon_rigth.tscn" id="17_qo1ng"]
+[ext_resource type="AudioStream" uid="uid://t2hx06uvfq2b" path="res://Scenes/SFX/S1_A0.wav" id="13_p68h6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqidu"]
 texture = ExtResource("2_p68h6")
@@ -745,8 +746,8 @@ z_index = -1
 scroll_scale = Vector2(0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1615505421]
-position = Vector2(608.24994, 322)
-scale = Vector2(0.28320313, 0.29814813)
+position = Vector2(595.1875, 378.125)
+scale = Vector2(0.17561853, 0.1917824)
 texture = ExtResource("10_w6udh")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1567658030]
@@ -782,6 +783,11 @@ script = ExtResource("7_p68h6")
 
 [node name="Player" parent="." unique_id=2016557864 groups=["Jugadores"] instance=ExtResource("8_qo1ng")]
 position = Vector2(154, 292)
+
+[node name="saltosfx" type="AudioStreamPlayer" parent="Player" unique_id=601290285]
+stream = ExtResource("13_p68h6")
+volume_db = -2.476
+pitch_scale = 0.86
 
 [node name="Player2" parent="." unique_id=1414705170 groups=["Jugadores"] instance=ExtResource("9_6ppht")]
 position = Vector2(18008, 6948)

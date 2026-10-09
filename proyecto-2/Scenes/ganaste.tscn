@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://be4xk4hc2o64c"]
+
+[ext_resource type="Script" uid="uid://dlawu3ych41ib" path="res://Scenes/ganaste.gd" id="1_jo6ul"]
+[ext_resource type="Texture2D" uid="uid://cgd3yuhullrbi" path="res://Art/silueta.png" id="1_tpnci"]
+[ext_resource type="FontFile" uid="uid://bd6etsf4r5bmk" path="res://Scenes/molki/AlfaSlabOne-Regular.ttf" id="2_jo6ul"]
+[ext_resource type="Texture2D" uid="uid://dppga4eakpa80" path="res://Art/ui/PNG/Hangar/Table_02.png" id="3_y23h8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13qdw"]
+atlas = ExtResource("3_y23h8")
+
+[node name="ganaste" type="Node" unique_id=1145955230]
+script = ExtResource("1_jo6ul")
+
+[node name="Silueta" type="Sprite2D" parent="." unique_id=121497965]
+position = Vector2(576, 324.5)
+scale = Vector2(0.30052087, 0.30046296)
+texture = ExtResource("1_tpnci")
+
+[node name="Label" type="Label" parent="Silueta" unique_id=928736166]
+offset_left = -1274.454
+offset_top = -667.3036
+offset_right = 1251.161
+offset_bottom = -236.30359
+theme_override_fonts/font = ExtResource("2_jo6ul")
+theme_override_font_sizes/font_size = 314
+text = "Ganaste"
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=1264901978]
+offset_left = 413.0
+offset_top = 305.0
+offset_right = 742.0
+offset_bottom = 413.0
+icon = SubResource("AtlasTexture_13qdw")
+flat = true
+
+[node name="Label" type="Label" parent="Button" unique_id=1265696328]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 13.0
+offset_right = 283.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("2_jo6ul")
+theme_override_font_sizes/font_size = 50
+text = "menu"
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

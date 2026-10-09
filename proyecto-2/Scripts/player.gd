@@ -3,6 +3,7 @@ extends Jugador
 @onready var vida: TextureProgressBar = $CanvasLayer/vida
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var saltosfx: AudioStreamPlayer = $saltosfx
 var coin_label: Label
 var can_move: bool = true
 var ground_pound_velocity = 300
@@ -73,6 +74,7 @@ func update_animation(direction: float) -> void:
 	if not is_on_floor():
 		if velocity.y < 0:
 			sprite.play("jump")
+			#$saltosfx.play()
 		else:
 			sprite.play("idle")
 		return

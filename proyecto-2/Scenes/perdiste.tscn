@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://cqv4bob4qhe7r"]
+
+[ext_resource type="Script" uid="uid://cso3821bvilpx" path="res://Scenes/perdiste.gd" id="1_2d3xh"]
+[ext_resource type="FontFile" uid="uid://bd6etsf4r5bmk" path="res://Scenes/molki/AlfaSlabOne-Regular.ttf" id="1_amg8w"]
+[ext_resource type="Texture2D" uid="uid://dppga4eakpa80" path="res://Art/ui/PNG/Hangar/Table_02.png" id="2_2d3xh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrivr"]
+atlas = ExtResource("2_2d3xh")
+region = Rect2(3.5615578, 0, 313.8322, 91.600296)
+
+[node name="perdiste" type="Control" unique_id=2007632126]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2d3xh")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1909112952]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -3.0
+offset_right = 1158.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1765631151]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 148.0
+offset_right = 811.0
+offset_bottom = 286.0
+theme_override_fonts/font = ExtResource("1_amg8w")
+theme_override_font_sizes/font_size = 100
+text = "Perdiste"
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=735095233]
+layout_mode = 0
+offset_left = 402.0
+offset_top = 316.0
+offset_right = 723.0
+offset_bottom = 415.0
+icon = SubResource("AtlasTexture_xrivr")
+flat = true
+
+[node name="Label" type="Label" parent="Button" unique_id=753655826]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 23.0
+offset_right = 289.0
+offset_bottom = 76.0
+theme_override_fonts/font = ExtResource("1_amg8w")
+theme_override_font_sizes/font_size = 38
+text = "Reintentar"
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
