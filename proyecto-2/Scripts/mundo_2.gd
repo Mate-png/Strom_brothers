@@ -1,6 +1,6 @@
 extends Node
 
-var Musica = preload("res://Art/Audio/workout.ogg")
+var Musica = preload("res://Art/Audio/song2.mp3")
 
 
 func _process(_delta: float) -> void:

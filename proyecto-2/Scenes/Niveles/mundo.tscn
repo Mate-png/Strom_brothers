@@ -13,11 +13,11 @@
 [ext_resource type="Script" uid="uid://drggr2gpbcc32" path="res://Scripts/enemigos_invoquer.gd" id="11_dm570"]
 [ext_resource type="PackedScene" uid="uid://bnnoif2rqco1d" path="res://Scenes/nodomoneda.tscn" id="12_j65wt"]
 [ext_resource type="PackedScene" uid="uid://dxo4a0kddagaa" path="res://Scenes/palanca.tscn" id="13_1tg0d"]
+[ext_resource type="AudioStream" uid="uid://t2hx06uvfq2b" path="res://Scenes/SFX/S1_A0.wav" id="13_p68h6"]
 [ext_resource type="PackedScene" uid="uid://cwi7myq1fvxxg" path="res://Scenes/obstaculos/cañones/cañon_left.tscn" id="14_c4pq3"]
 [ext_resource type="PackedScene" uid="uid://buu5rq5v608st" path="res://Scenes/obstaculos/cañones/cañon_top.tscn" id="15_j2o5r"]
 [ext_resource type="PackedScene" uid="uid://bmifuqyfc3dsv" path="res://Scenes/obstaculos/cañones/cañon_down.tscn" id="16_ctm0j"]
 [ext_resource type="PackedScene" uid="uid://ocklhpb02ryu" path="res://Scenes/obstaculos/cañones/cañon_rigth.tscn" id="17_qo1ng"]
-[ext_resource type="AudioStream" uid="uid://t2hx06uvfq2b" path="res://Scenes/SFX/S1_A0.wav" id="13_p68h6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqidu"]
 texture = ExtResource("2_p68h6")
