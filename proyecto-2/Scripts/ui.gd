@@ -1,7 +1,12 @@
 extends Control
 @onready var anim_player: AnimationPlayer = $Label/AnimationPlayer 
+var Musica = preload("res://Scenes/study.ogg")
+
 func _ready() -> void:
 	anim_player.play("new_animation")
+	if !$AudioStreamPlayer.is_playing():
+		$AudioStreamPlayer.stream = Musica
+		$AudioStreamPlayer.play()
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "new_animation":
 		if is_instance_valid(anim_player):

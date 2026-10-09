@@ -1,14 +1,14 @@
 [gd_resource type="AudioBusLayout" format=3 uid="uid://bi1d3j4v77gf6"]
 
-[sub_resource type="AudioEffectEQ10" id="AudioEffectEQ10_j3pel"]
-resource_name = "EQ10"
+[sub_resource type="AudioEffectPanner" id="AudioEffectPanner_trqlu"]
+resource_name = "Panner"
 
-[sub_resource type="AudioEffectPitchShift" id="AudioEffectPitchShift_j3pel"]
-resource_name = "PitchShift"
+[sub_resource type="AudioEffectPhaser" id="AudioEffectPhaser_trqlu"]
+resource_name = "Phaser"
 
 [resource]
-bus/0/volume_db = -2.5124817
-bus/0/effect/0/effect = SubResource("AudioEffectEQ10_j3pel")
+bus/0/volume_db = -1.3192663
+bus/0/effect/0/effect = SubResource("AudioEffectPanner_trqlu")
 bus/0/effect/0/enabled = true
-bus/0/effect/1/effect = SubResource("AudioEffectPitchShift_j3pel")
-bus/0/effect/1/enabled = true
+bus/0/effect/1/effect = SubResource("AudioEffectPhaser_trqlu")
+bus/0/effect/1/enabled = false

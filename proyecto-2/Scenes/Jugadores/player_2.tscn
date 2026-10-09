@@ -54,6 +54,9 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("2_achxb")
+}, {
+"duration": 1.0,
 "texture": ExtResource("8_2xhua")
 }, {
 "duration": 1.0,
@@ -98,9 +101,10 @@ radius = 15.033297
 script = ExtResource("1_cgts5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=879582761]
-scale = Vector2(0.053, 0.043)
+position = Vector2(-0.4799987, -1.9750001)
+scale = Vector2(0.051500004, 0.048642855)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"dash"
+animation = &"jump"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=101814628]

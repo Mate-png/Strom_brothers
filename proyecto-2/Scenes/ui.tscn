@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://bj147er7xrh3r" path="res://Scripts/ui.gd" id="1_27fn8"]
 [ext_resource type="Script" uid="uid://csw5ydryiu6cs" path="res://Scripts/animation_player.gd" id="2_m6e0p"]
 [ext_resource type="FontFile" uid="uid://bd6etsf4r5bmk" path="res://Scenes/molki/AlfaSlabOne-Regular.ttf" id="2_nltto"]
+[ext_resource type="AudioStream" uid="uid://cm8uldwtj8ic1" path="res://Scenes/study.ogg" id="3_2246s"]
 
 [sub_resource type="Animation" id="Animation_m6e0p"]
-length = 0.001
+length = 10.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -30,6 +31,25 @@ tracks/1/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 1.4300002,
+"start_offset": 0.0,
+"stream": ExtResource("3_2246s")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": null
+}],
+"times": PackedFloat32Array(0, 10.033334)
+}
+tracks/2/use_blend = true
 
 [sub_resource type="Animation" id="Animation_27fn8"]
 resource_name = "new_animation"
@@ -68,6 +88,8 @@ _data = {
 &"new_animation": SubResource("Animation_27fn8"),
 &"new_animation_2": SubResource("Animation_nltto")
 }
+
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_2246s"]
 
 [node name="UI" type="Control" unique_id=1182622403]
 layout_mode = 3
@@ -116,6 +138,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=698520881]
+stream = SubResource("AudioStreamPolyphonic_2246s")
 
 [connection signal="animation_finished" from="Label/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="Label/AnimationPlayer" to="Label/AnimationPlayer" method="_on_animation_finished"]
