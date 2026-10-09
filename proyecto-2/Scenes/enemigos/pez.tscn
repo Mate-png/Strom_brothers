@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://b1eggxok5pl5b"]
 
-[ext_resource type="Script" uid="uid://dij1n57dog7p7" path="res://pez.gd" id="1_06adi"]
+[ext_resource type="Script" uid="uid://dij1n57dog7p7" path="res://Scripts/pez.gd" id="1_06adi"]
 [ext_resource type="Texture2D" uid="uid://edri533w1sgv" path="res://Art/enemigo+/164 sin título_20261005201859.png" id="2_31nv2"]
 [ext_resource type="Texture2D" uid="uid://cv8xjn5cma8yi" path="res://Art/enemigo+/164 sin título_20261005201908.png" id="3_6rjjh"]
 [ext_resource type="Texture2D" uid="uid://bw4fnodhc0kqf" path="res://Art/enemigo+/164 sin título_20261005201914.png" id="4_gaf0o"]
-[ext_resource type="Script" uid="uid://djcdgyu6spjlo" path="res://area_2d_2.gd" id="5_31nv2"]
-[ext_resource type="Script" uid="uid://c4vo00ywdw5er" path="res://vision.gd" id="5_dxc1w"]
+[ext_resource type="Script" uid="uid://djcdgyu6spjlo" path="res://Scripts/area_2d_2.gd" id="5_31nv2"]
+[ext_resource type="Script" uid="uid://c4vo00ywdw5er" path="res://Scripts/vision.gd" id="5_dxc1w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_upwtk"]
 size = Vector2(24.549587, 4.012396)

@@ -3,6 +3,7 @@ extends Jugador
 @onready var vida: TextureProgressBar = $CanvasLayer/vida
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var saltosfx: AudioStreamPlayer = $saltosfx
 var coin_label: Label
 var can_move: bool = true
 var ground_pound_velocity = 300
@@ -45,7 +46,15 @@ func _physics_process(_delta: float) -> void:
 		canvas_layer.visible =false
 		velocity.x = 0
 		sprite.play("idle")
+
 	move_and_slide()
+	
+	for i in get_slide_collision_count():
+		var colision = get_slide_collision(i)
+		var colider = colision.get_collider()
+		if colider is TileMapLayer and colider.name == "Pinchos":
+			morir()
+
 
 
 func ground_pound():
@@ -65,6 +74,7 @@ func update_animation(direction: float) -> void:
 	if not is_on_floor():
 		if velocity.y < 0:
 			sprite.play("jump")
+			#$saltosfx.play()
 		else:
 			sprite.play("idle")
 		return
@@ -92,7 +102,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 		gain_life()
 
 func gain_life():
-	vida.value += 1
+	vida.value += 25
 
 func set_count(new_coin_count: int) -> void:
 	coin_collected = new_coin_count

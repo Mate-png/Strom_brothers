@@ -9,7 +9,7 @@ region = Rect2(279.347, 361.49768, 71.5744, 58.77997)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(71, 58)
 
-[node name="Area2D" type="Area2D" unique_id=1856162620]
+[node name="caño p2" type="StaticBody2D" unique_id=136926220]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1310024479]
 position = Vector2(0.5, 0)

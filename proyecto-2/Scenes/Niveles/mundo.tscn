@@ -10,8 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://o2bjoybuhyyi" path="res://Scenes/Jugadores/Player.tscn" id="8_qo1ng"]
 [ext_resource type="PackedScene" uid="uid://dai3jy3ilbudu" path="res://Scenes/Jugadores/player_2.tscn" id="9_6ppht"]
 [ext_resource type="Texture2D" uid="uid://cbcm6vanlgt6j" path="res://Art/fondos/n23.png" id="10_w6udh"]
-[ext_resource type="PackedScene" uid="uid://c06ntngh3jpw4" path="res://Scenes/enemigos/enemigo2.tscn" id="11_336mn"]
+[ext_resource type="Script" uid="uid://drggr2gpbcc32" path="res://Scripts/enemigos_invoquer.gd" id="11_dm570"]
 [ext_resource type="PackedScene" uid="uid://bnnoif2rqco1d" path="res://Scenes/nodomoneda.tscn" id="12_j65wt"]
+[ext_resource type="AudioStream" uid="uid://t2hx06uvfq2b" path="res://Scenes/SFX/S1_A0.wav" id="13_p68h6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqidu"]
 texture = ExtResource("2_p68h6")
@@ -781,8 +782,8 @@ z_index = -1
 scroll_scale = Vector2(0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1615505421]
-position = Vector2(608.24994, 322)
-scale = Vector2(0.28320313, 0.29814813)
+position = Vector2(595.1875, 378.125)
+scale = Vector2(0.17561853, 0.1917824)
 texture = ExtResource("10_w6udh")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1567658030]
@@ -927,11 +928,9 @@ texture = SubResource("AtlasTexture_7f2x3")
 tile_map_data = PackedByteArray("AADHAcYAAAAWAAgAAADHAccAAAAWAAkAAADKAcYAAAAXAAgAAADKAccAAAAXAAkAAADLAcYAAAAWAAgAAADLAccAAAAWAAkAAADMAcYAAAAXAAgAAADMAccAAAAXAAkAAADIAcYAAAAXAAgAAADIAccAAAAXAAkAAADJAcYAAAAWAAgAAADJAccAAAAWAAkAAABlAc8AAAAWAAgAAABlAdAAAAAWAAkAAABmAc8AAAAXAAgAAABmAdAAAAAXAAkAAABnAc8AAAAWAAgAAABnAdAAAAAWAAkAAABoAc8AAAAXAAgAAABoAdAAAAAXAAkAAABpAc8AAAAWAAgAAABpAdAAAAAWAAkAAABqAc8AAAAXAAgAAABqAdAAAAAXAAkAAABzAc8AAAAWAAgAAABzAdAAAAAWAAkAAAB0Ac8AAAAXAAgAAAB0AdAAAAAXAAkAAAB1Ac8AAAAWAAgAAAB1AdAAAAAWAAkAAAB2Ac8AAAAXAAgAAAB2AdAAAAAXAAkAAAB3Ac8AAAAWAAgAAAB3AdAAAAAWAAkAAABPAc8AAAAWAAgAAABPAdAAAAAWAAkAAABQAc8AAAAXAAgAAABQAdAAAAAXAAkAAABNAc8AAAAWAAgAAABNAdAAAAAWAAkAAABOAc8AAAAXAAgAAABOAdAAAAAXAAkAAABLAc8AAAAWAAgAAABLAdAAAAAWAAkAAABMAc8AAAAXAAgAAABMAdAAAAAXAAkAAABJAc8AAAAWAAgAAABJAdAAAAAWAAkAAABKAc8AAAAXAAgAAABKAdAAAAAXAAkAAABFAc8AAAAWAAgAAABFAdAAAAAWAAkAAABGAc8AAAAXAAgAAABGAdAAAAAXAAkAAABDAc8AAAAWAAgAAABDAdAAAAAWAAkAAABEAc8AAAAXAAgAAABEAdAAAAAXAAkAAABBAc8AAAAWAAgAAABBAdAAAAAWAAkAAABCAc8AAAAXAAgAAABCAdAAAAAXAAkAAABAAbkAAAAWAAgAAABAAboAAAAWAAkAAABBAbkAAAAXAAgAAABBAboAAAAXAAkAAABCAbkAAAAWAAgAAABCAboAAAAWAAkAAABDAbkAAAAXAAgAAABDAboAAAAXAAkAAABEAbkAAAAWAAgAAABEAboAAAAWAAkAAABFAbkAAAAXAAgAAABFAboAAAAXAAkAAABGAbkAAAAWAAgAAABGAboAAAAWAAkAAABHAbkAAAAXAAgAAABHAboAAAAXAAkAAABIAbkAAAAWAAgAAABIAboAAAAWAAkAAABJAbkAAAAXAAgAAABJAboAAAAXAAkAAABKAbkAAAAWAAgAAABKAboAAAAWAAkAAABLAbkAAAAXAAgAAABLAboAAAAXAAkAAABMAbkAAAAWAAgAAABMAboAAAAWAAkAAABNAbkAAAAXAAgAAABNAboAAAAXAAkAAABOAbkAAAAWAAgAAABOAboAAAAWAAkAAABPAbkAAAAXAAgAAABPAboAAAAXAAkAAABQAbkAAAAWAAgAAABQAboAAAAWAAkAAABRAbkAAAAXAAgAAABRAboAAAAXAAkAAABSAbkAAAAWAAgAAABSAboAAAAWAAkAAABTAbkAAAAXAAgAAABTAboAAAAXAAkAAABUAbkAAAAWAAgAAABUAboAAAAWAAkAAABVAbkAAAAXAAgAAABVAboAAAAXAAkAAABWAbkAAAAWAAgAAABWAboAAAAWAAkAAABXAbkAAAAXAAgAAABXAboAAAAXAAkAAABHAasAAAAWAAgAAABHAawAAAAWAAkAAABIAasAAAAXAAgAAABIAawAAAAXAAkAAABFAasAAAAWAAgAAABFAawAAAAWAAkAAABGAasAAAAXAAgAAABGAawAAAAXAAkAAABDAasAAAAWAAgAAABDAawAAAAWAAkAAABEAasAAAAXAAgAAABEAawAAAAXAAkAAABBAasAAAAWAAgAAABBAawAAAAWAAkAAABCAasAAAAXAAgAAABCAawAAAAXAAkAAAA/AasAAAAWAAgAAAA/AawAAAAWAAkAAABAAasAAAAXAAgAAABAAawAAAAXAAkAAAA9AasAAAAWAAgAAAA9AawAAAAWAAkAAAA+AasAAAAXAAgAAAA+AawAAAAXAAkAAAA7AasAAAAWAAgAAAA7AawAAAAWAAkAAAA8AasAAAAXAAgAAAA8AawAAAAXAAkAAAA5AasAAAAWAAgAAAA5AawAAAAWAAkAAAA6AasAAAAXAAgAAAA6AawAAAAXAAkAAAA3AasAAAAWAAgAAAA3AawAAAAWAAkAAAA4AasAAAAXAAgAAAA4AawAAAAXAAkAAAA1AasAAAAWAAgAAAA1AawAAAAWAAkAAAA2AasAAAAXAAgAAAA2AawAAAAXAAkAAAA7AZgAAAAWAAgAAAA7AZkAAAAWAAkAAAA8AZgAAAAXAAgAAAA8AZkAAAAXAAkAAAA9AZgAAAAWAAgAAAA9AZkAAAAWAAkAAAA+AZgAAAAXAAgAAAA+AZkAAAAXAAkAAAA/AZgAAAAWAAgAAAA/AZkAAAAWAAkAAABAAZgAAAAXAAgAAABAAZkAAAAXAAkAAABKAYQAAAAWAAgAAABKAYUAAAAWAAkAAABLAYQAAAAXAAgAAABLAYUAAAAXAAkAAABIAYQAAAAWAAgAAABIAYUAAAAWAAkAAABJAYQAAAAXAAgAAABJAYUAAAAXAAkAAABGAYQAAAAWAAgAAABGAYUAAAAWAAkAAABHAYQAAAAXAAgAAABHAYUAAAAXAAkAAABEAYQAAAAWAAgAAABEAYUAAAAWAAkAAABFAYQAAAAXAAgAAABFAYUAAAAXAAkAAABCAYQAAAAWAAgAAABCAYUAAAAWAAkAAABDAYQAAAAXAAgAAABDAYUAAAAXAAkAAAA=")
 tile_set = SubResource("TileSet_g4v7s")
 
-[node name="deadline" parent="." unique_id=924711749 instance=ExtResource("3_1tg0d")]
-position = Vector2(4003, 1933.9999)
-
-[node name="deadline2" parent="." unique_id=1236348612 instance=ExtResource("3_1tg0d")]
-position = Vector2(4003, 1933.9999)
+[node name="deadline" parent="." unique_id=1236348612 instance=ExtResource("3_1tg0d")]
+position = Vector2(3651, 514)
+scale = Vector2(255.94096, 1.2780366)
 
 [node name="Camara" parent="." unique_id=1393843745 instance=ExtResource("5_hg8y1")]
 
@@ -946,43 +945,50 @@ offset_bottom = -82.0
 theme_override_font_sizes/font_size = 22
 
 [node name="Meta" parent="." unique_id=19064331 instance=ExtResource("6_j2o5r")]
-position = Vector2(9739, 3207)
+position = Vector2(9695.001, 3209.9998)
+scale = Vector2(4.5772715, 1.0201181)
 script = ExtResource("7_p68h6")
 
 [node name="Player" parent="." unique_id=2016557864 groups=["Jugadores"] instance=ExtResource("8_qo1ng")]
 position = Vector2(154, 292)
 
+[node name="saltosfx" type="AudioStreamPlayer" parent="Player" unique_id=601290285]
+stream = ExtResource("13_p68h6")
+volume_db = -2.476
+pitch_scale = 0.86
+
 [node name="Player2" parent="." unique_id=1414705170 groups=["Jugadores"] instance=ExtResource("9_6ppht")]
 position = Vector2(18008, 6948)
 
 [node name="Enemigos" type="Node" parent="." unique_id=1757351116]
+script = ExtResource("11_dm570")
 
-[node name="enemigos" parent="Enemigos" unique_id=1536708848 instance=ExtResource("11_336mn")]
+[node name="Marker2D" type="Marker2D" parent="Enemigos" unique_id=1141435838]
 position = Vector2(1817, 499)
 
-[node name="enemigos2" parent="Enemigos" unique_id=700524051 instance=ExtResource("11_336mn")]
+[node name="Marker2D2" type="Marker2D" parent="Enemigos" unique_id=1671881627]
 position = Vector2(4695, 432)
 
-[node name="enemigos5" parent="Enemigos" unique_id=628047046 instance=ExtResource("11_336mn")]
-position = Vector2(8527, 1969)
+[node name="Marker2D3" type="Marker2D" parent="Enemigos" unique_id=1061984143]
+position = Vector2(8114, 574)
 
-[node name="enemigos3" parent="Enemigos" unique_id=1524681670 instance=ExtResource("11_336mn")]
-position = Vector2(8114, 575)
-
-[node name="enemigos4" parent="Enemigos" unique_id=1335726301 instance=ExtResource("11_336mn")]
+[node name="Marker2D4" type="Marker2D" parent="Enemigos" unique_id=1547785129]
 position = Vector2(8703, 851)
 
-[node name="enemigos6" parent="Enemigos" unique_id=827852714 instance=ExtResource("11_336mn")]
-position = Vector2(15209, 6942)
+[node name="Marker2D5" type="Marker2D" parent="Enemigos" unique_id=968521320]
+position = Vector2(8527, 1969)
 
-[node name="enemigos7" parent="Enemigos" unique_id=1449042826 instance=ExtResource("11_336mn")]
-position = Vector2(16870, 6871)
+[node name="Marker2D6" type="Marker2D" parent="Enemigos" unique_id=1180869351]
+position = Vector2(11800, 5017)
 
-[node name="enemigos8" parent="Enemigos" unique_id=89678490 instance=ExtResource("11_336mn")]
+[node name="Marker2D7" type="Marker2D" parent="Enemigos" unique_id=1444389410]
 position = Vector2(11014, 5847)
 
-[node name="enemigos9" parent="Enemigos" unique_id=1159327106 instance=ExtResource("11_336mn")]
-position = Vector2(11800, 5017)
+[node name="Marker2D8" type="Marker2D" parent="Enemigos" unique_id=915105706]
+position = Vector2(15209, 6942)
+
+[node name="Marker2D9" type="Marker2D" parent="Enemigos" unique_id=581324111]
+position = Vector2(16870, 6871)
 
 [node name="Monedas" type="Node" parent="." unique_id=887516535]
 

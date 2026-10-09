@@ -1,7 +1,5 @@
 extends Node
 
-
-
 var Musica = preload("res://Art/Audio/workout.ogg")
 
 

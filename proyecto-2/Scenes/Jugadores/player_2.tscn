@@ -54,9 +54,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_achxb")
-}, {
-"duration": 1.0,
 "texture": ExtResource("8_2xhua")
 }, {
 "duration": 1.0,
@@ -94,6 +91,9 @@ animations = [{
 radius = 12.0
 height = 28.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_yuas8"]
+radius = 15.033297
+
 [node name="Player2" type="CharacterBody2D" unique_id=1414705170]
 script = ExtResource("1_cgts5")
 
@@ -101,7 +101,7 @@ script = ExtResource("1_cgts5")
 position = Vector2(-0.4799987, -1.9750001)
 scale = Vector2(0.051500004, 0.048642855)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
-animation = &"jump"
+animation = &"dash"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=101814628]
@@ -121,3 +121,11 @@ scale = Vector2(1.5116283, 1.5866655)
 texture_under = ExtResource("3_eus2p")
 texture_over = ExtResource("4_6cafw")
 texture_progress = ExtResource("5_mtyrt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=364197523]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2011073601]
+shape = SubResource("CircleShape2D_yuas8")
+debug_color = Color(0.79065764, 0.42914754, 3.85046e-07, 0.41960785)
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
