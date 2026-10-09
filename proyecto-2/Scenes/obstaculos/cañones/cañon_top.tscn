@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://buu5rq5v608st"]
+
+[ext_resource type="Script" uid="uid://ckxfieka5idtl" path="res://Scripts/cañones/cañon_arriba.gd" id="1_gjrvl"]
+[ext_resource type="Texture2D" uid="uid://f1douhw6hyux" path="res://Art/sheet.png" id="2_kxkcb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(71, 58)
+
+[node name="caño" type="StaticBody2D" unique_id=312826290]
+script = ExtResource("1_gjrvl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=230060672]
+position = Vector2(0.5, 0)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=565751276]
+position = Vector2(0, -53)
+
+[node name="disparo_tiempo" type="Timer" parent="." unique_id=1057338679]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=894443991]
+
+[node name="Sheet" type="Sprite2D" parent="." unique_id=1171151434]
+position = Vector2(1, 0)
+texture = ExtResource("2_kxkcb")
+region_enabled = true
+region_rect = Rect2(355, 421, 58.009155, 69)

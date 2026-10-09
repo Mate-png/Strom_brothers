@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://5xanfu65hlrv"]
 
 [ext_resource type="Texture2D" uid="uid://f1douhw6hyux" path="res://Art/sheet.png" id="1_joq2a"]
-[ext_resource type="Script" uid="uid://dfjopptkxwlul" path="res://Scripts/mundo.gd" id="1_t83iy"]
+[ext_resource type="Script" uid="uid://r31e8jcev3ei" path="res://Scripts/mundo_2.gd" id="1_knnd7"]
 [ext_resource type="PackedScene" uid="uid://o2bjoybuhyyi" path="res://Scenes/Jugadores/Player.tscn" id="2_2f3cg"]
 [ext_resource type="PackedScene" uid="uid://dai3jy3ilbudu" path="res://Scenes/Jugadores/player_2.tscn" id="3_t83iy"]
 [ext_resource type="Script" uid="uid://cxyhqo6fsw27v" path="res://Scenes/Niveles/enemigos_parte_2.gd" id="5_8otm8"]
@@ -12,7 +12,11 @@
 [ext_resource type="Script" uid="uid://ctwof8ckxexah" path="res://Scripts/meta_nivel2.gd" id="8_8otm8"]
 [ext_resource type="Texture2D" uid="uid://sdc5cmb4vjcx" path="res://Art/fondos/ce.png" id="8_kregd"]
 [ext_resource type="PackedScene" uid="uid://bnnoif2rqco1d" path="res://Scenes/nodomoneda.tscn" id="9_5sjel"]
+[ext_resource type="PackedScene" uid="uid://bmifuqyfc3dsv" path="res://Scenes/obstaculos/cañones/cañon_down.tscn" id="9_wufsj"]
+[ext_resource type="PackedScene" uid="uid://ocklhpb02ryu" path="res://Scenes/obstaculos/cañones/cañon_rigth.tscn" id="10_8863v"]
+[ext_resource type="PackedScene" uid="uid://buu5rq5v608st" path="res://Scenes/obstaculos/cañones/cañon_top.tscn" id="11_w5n63"]
 [ext_resource type="PackedScene" uid="uid://bowar38bsrmnd" path="res://Scenes/obstaculos/deadline.tscn" id="12_8otm8"]
+[ext_resource type="PackedScene" uid="uid://dxo4a0kddagaa" path="res://Scenes/palanca.tscn" id="15_i4lkx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b88mh"]
 texture = ExtResource("1_joq2a")
@@ -154,44 +158,8 @@ terrain_set_0/terrain_0/name = "snow"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_7u73v")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_13qdw"]
-size = Vector2(70, 58)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xrivr"]
-atlas = ExtResource("1_joq2a")
-region = Rect2(280.0085, 361.34177, 70.55972, 58.759857)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b1lj4"]
-size = Vector2(48, 69)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_13qdw"]
-atlas = ExtResource("1_joq2a")
-region = Rect2(359.9627, 349.88303, 50.377136, 70.8569)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_njqwk"]
-size = Vector2(68, 57)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_b1lj4"]
-atlas = ExtResource("1_joq2a")
-region = Rect2(280.05392, 431.4159, 69.342285, 58.584106)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wi6ju"]
-size = Vector2(48, 67)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_njqwk"]
-atlas = ExtResource("1_joq2a")
-region = Rect2(360.16678, 421.22845, 49.70633, 68.771545)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7f2x3"]
-atlas = ExtResource("1_joq2a")
-region = Rect2(144.01321, 421.76312, 66.35956, 68.23688)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_25bs2"]
-atlas = ExtResource("1_joq2a")
-region = Rect2(0, 421.1273, 70.92206, 68.87271)
-
 [node name="Mundo2" type="Node" unique_id=403033546]
-script = ExtResource("1_t83iy")
+script = ExtResource("1_knnd7")
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1070531708]
 light_mask = 2
@@ -285,105 +253,36 @@ position = Vector2(21415, -4276)
 
 [node name="Cañones" type="Node" parent="." unique_id=1190144007]
 
-[node name="Cañon1" type="Area2D" parent="Cañones" unique_id=1396736377]
-position = Vector2(5328, -959)
+[node name="p1" type="Node" parent="Cañones" unique_id=1450289259]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cañones/Cañon1" unique_id=436935923]
-position = Vector2(25, 19)
-shape = SubResource("RectangleShape2D_13qdw")
+[node name="caño" parent="Cañones/p1" unique_id=312826290 instance=ExtResource("9_wufsj")]
+position = Vector2(2627, 166)
 
-[node name="Sprite2D" type="Sprite2D" parent="Cañones/Cañon1/CollisionShape2D" unique_id=1643270224]
-texture = SubResource("AtlasTexture_xrivr")
+[node name="caño2" parent="Cañones/p1" unique_id=1664506500 instance=ExtResource("9_wufsj")]
+position = Vector2(7277, -1504)
 
-[node name="Cañon2" type="Area2D" parent="Cañones" unique_id=1527800861]
-position = Vector2(2641, 141)
+[node name="caño3" parent="Cañones/p1" unique_id=136926220 instance=ExtResource("10_8863v")]
+position = Vector2(9205, -1359)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cañones/Cañon2" unique_id=1208731339]
-position = Vector2(-14, 24.5)
-shape = SubResource("RectangleShape2D_b1lj4")
+[node name="caño4" parent="Cañones/p1" unique_id=1014393444 instance=ExtResource("9_wufsj")]
+position = Vector2(10676, -2484)
 
-[node name="Sprite2D" type="Sprite2D" parent="Cañones/Cañon2/CollisionShape2D" unique_id=677610197]
-texture = SubResource("AtlasTexture_13qdw")
+[node name="p2" type="Node" parent="Cañones" unique_id=960751101]
 
-[node name="Cañon7" type="Area2D" parent="Cañones" unique_id=549974671]
-position = Vector2(7289, -1528)
+[node name="caño5" parent="Cañones/p2" unique_id=162394712 instance=ExtResource("9_wufsj")]
+position = Vector2(19986, -3472)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cañones/Cañon7" unique_id=1815631174]
-position = Vector2(-14, 24.5)
-shape = SubResource("RectangleShape2D_b1lj4")
+[node name="caño6" parent="Cañones/p2" unique_id=1013580934 instance=ExtResource("10_8863v")]
+position = Vector2(18796, -2969)
 
-[node name="Sprite2D" type="Sprite2D" parent="Cañones/Cañon7/CollisionShape2D" unique_id=1812670383]
-texture = SubResource("AtlasTexture_13qdw")
+[node name="caño7" parent="Cañones/p2" unique_id=1335098509 instance=ExtResource("10_8863v")]
+position = Vector2(17777, -3459)
 
-[node name="Cañon10" type="Area2D" parent="Cañones" unique_id=846150170]
-position = Vector2(10691, -2508)
+[node name="caño8" parent="Cañones/p2" unique_id=24610412 instance=ExtResource("11_w5n63")]
+position = Vector2(14908, -3325)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cañones/Cañon10" unique_id=1458251956]
-position = Vector2(-14, 24.5)
-shape = SubResource("RectangleShape2D_b1lj4")
-
-[node name="Sprite2D" type="Sprite2D" parent="Cañones/Cañon10/CollisionShape2D" unique_id=1987701484]
-texture = SubResource("AtlasTexture_13qdw")
-
-[node name="Cañon6" type="Area2D" parent="Cañones" unique_id=1846233401]
-position = Vector2(20000, -3497)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cañones/Cañon6" unique_id=413777429]
-position = Vector2(-14, 24.5)
-shape = SubResource("RectangleShape2D_b1lj4")
-
-[node name="Sprite2D" type="Sprite2D" parent="Cañones/Cañon6/CollisionShape2D" unique_id=1264153654]
-texture = SubResource("AtlasTexture_13qdw")
-
-[node name="Cañon3" type="Area2D" parent="Cañones" unique_id=310444481]
-position = Vector2(9229, -1377)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cañones/Cañon3" unique_id=445993961]
-position = Vector2(-24, 18.5)
-shape = SubResource("RectangleShape2D_njqwk")
-
-[node name="Sprite2D" type="Sprite2D" parent="Cañones/Cañon3/CollisionShape2D" unique_id=417107436]
-texture = SubResource("AtlasTexture_b1lj4")
-
-[node name="Cañon5" type="Area2D" parent="Cañones" unique_id=375528424]
-position = Vector2(17802, -3477)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cañones/Cañon5" unique_id=52170000]
-position = Vector2(-24, 18.5)
-shape = SubResource("RectangleShape2D_njqwk")
-
-[node name="Sprite2D" type="Sprite2D" parent="Cañones/Cañon5/CollisionShape2D" unique_id=1425447319]
-texture = SubResource("AtlasTexture_b1lj4")
-
-[node name="Cañon9" type="Area2D" parent="Cañones" unique_id=560806221]
-position = Vector2(18821, -2988)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cañones/Cañon9" unique_id=1602256583]
-position = Vector2(-24, 18.5)
-shape = SubResource("RectangleShape2D_njqwk")
-
-[node name="Sprite2D" type="Sprite2D" parent="Cañones/Cañon9/CollisionShape2D" unique_id=273948723]
-texture = SubResource("AtlasTexture_b1lj4")
-
-[node name="Cañon4" type="Area2D" parent="Cañones" unique_id=1811009987]
-position = Vector2(14923, -3348)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cañones/Cañon4" unique_id=1781324759]
-position = Vector2(-14, 23.5)
-shape = SubResource("RectangleShape2D_wi6ju")
-
-[node name="Sprite2D" type="Sprite2D" parent="Cañones/Cañon4/CollisionShape2D" unique_id=259596771]
-texture = SubResource("AtlasTexture_njqwk")
-
-[node name="Cañon8" type="Area2D" parent="Cañones" unique_id=1475187895]
-position = Vector2(13930, -2288)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cañones/Cañon8" unique_id=656898075]
-position = Vector2(-14, 23.5)
-shape = SubResource("RectangleShape2D_wi6ju")
-
-[node name="Sprite2D" type="Sprite2D" parent="Cañones/Cañon8/CollisionShape2D" unique_id=1981666043]
-texture = SubResource("AtlasTexture_njqwk")
+[node name="caño9" parent="Cañones/p2" unique_id=706854373 instance=ExtResource("11_w5n63")]
+position = Vector2(13915, -2269)
 
 [node name="Camara" parent="." unique_id=1393843745 instance=ExtResource("5_knnd7")]
 
@@ -394,45 +293,44 @@ script = ExtResource("8_8otm8")
 
 [node name="interruptores" type="Node" parent="." unique_id=825891928]
 
-[node name="Interruptor azul" type="Sprite2D" parent="interruptores" unique_id=1201440029]
-position = Vector2(3125, 604)
-texture = SubResource("AtlasTexture_7f2x3")
+[node name="Izuquierda" type="Node" parent="interruptores" unique_id=1714271977]
 
-[node name="Interruptor azul2" type="Sprite2D" parent="interruptores" unique_id=1284650192]
-position = Vector2(5809, -1305)
-texture = SubResource("AtlasTexture_7f2x3")
+[node name="palanca" parent="interruptores/Izuquierda" unique_id=21920502 node_paths=PackedStringArray("cañon") instance=ExtResource("15_i4lkx")]
+position = Vector2(3123, 629)
+"cañon" = NodePath("../../../Cañones/p2/caño5")
 
-[node name="Interruptor azul5" type="Sprite2D" parent="interruptores" unique_id=697163839]
-position = Vector2(4619, -175)
-texture = SubResource("AtlasTexture_7f2x3")
+[node name="palanca2" parent="interruptores/Izuquierda" unique_id=1907565299 node_paths=PackedStringArray("cañon") instance=ExtResource("15_i4lkx")]
+position = Vector2(4616, -150)
+"cañon" = NodePath("../../../Cañones/p2/caño6")
 
-[node name="Interruptor azul3" type="Sprite2D" parent="interruptores" unique_id=938473780]
-position = Vector2(8817, -882)
-texture = SubResource("AtlasTexture_7f2x3")
+[node name="palanca3" parent="interruptores/Izuquierda" unique_id=548406826 node_paths=PackedStringArray("cañon") instance=ExtResource("15_i4lkx")]
+position = Vector2(5808, -1277)
+"cañon" = NodePath("../../../Cañones/p2/caño7")
 
-[node name="Interruptor azul4" type="Sprite2D" parent="interruptores" unique_id=1909255361]
-position = Vector2(9613, -2144)
-texture = SubResource("AtlasTexture_7f2x3")
+[node name="palanca4" parent="interruptores/Izuquierda" unique_id=2086235036 node_paths=PackedStringArray("cañon") instance=ExtResource("15_i4lkx")]
+position = Vector2(8817, -857)
+"cañon" = NodePath("../../../Cañones/p2/caño8")
 
-[node name="Interruptor rojo" type="Sprite2D" parent="interruptores" unique_id=719368648]
-position = Vector2(19862, -3685)
-texture = SubResource("AtlasTexture_25bs2")
+[node name="palanca5" parent="interruptores/Izuquierda" unique_id=899965964 node_paths=PackedStringArray("cañon") instance=ExtResource("15_i4lkx")]
+position = Vector2(9609, -2118)
+"cañon" = NodePath("../../../Cañones/p2/caño9")
 
-[node name="Interruptor rojo2" type="Sprite2D" parent="interruptores" unique_id=1279995094]
-position = Vector2(19139, -3334)
-texture = SubResource("AtlasTexture_25bs2")
+[node name="derecha" type="Node" parent="interruptores" unique_id=221258930]
 
-[node name="Interruptor rojo3" type="Sprite2D" parent="interruptores" unique_id=748604375]
-position = Vector2(16131, -3898)
-texture = SubResource("AtlasTexture_25bs2")
+[node name="palanca" parent="interruptores/derecha" unique_id=1944105251 instance=ExtResource("15_i4lkx")]
+position = Vector2(19861, -3657)
 
-[node name="Interruptor rojo4" type="Sprite2D" parent="interruptores" unique_id=1715245848]
-position = Vector2(14299, -3613)
-texture = SubResource("AtlasTexture_25bs2")
+[node name="palanca2" parent="interruptores/derecha" unique_id=1844613120 node_paths=PackedStringArray("cañon") instance=ExtResource("15_i4lkx")]
+position = Vector2(19136, -3308)
+"cañon" = NodePath("../../../Cañones/p1/caño2")
 
-[node name="Interruptor rojo5" type="Sprite2D" parent="interruptores" unique_id=671766480]
-position = Vector2(13868, -2007)
-texture = SubResource("AtlasTexture_25bs2")
+[node name="palanca3" parent="interruptores/derecha" unique_id=1714378281 node_paths=PackedStringArray("cañon") instance=ExtResource("15_i4lkx")]
+position = Vector2(16128, -3866)
+"cañon" = NodePath("../../../Cañones/p1/caño3")
+
+[node name="palanca4" parent="interruptores/derecha" unique_id=1148633604 node_paths=PackedStringArray("cañon") instance=ExtResource("15_i4lkx")]
+position = Vector2(14298, -3588)
+"cañon" = NodePath("../../../Cañones/p1/caño4")
 
 [node name="Monedas" type="Node" parent="." unique_id=194665591]
 

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cgb1irjbkfbmd"]
+
+[ext_resource type="Script" uid="uid://colte7p8cedff" path="res://Scripts/balas/lazer_dw.gd" id="1_bcrxc"]
+[ext_resource type="Texture2D" uid="uid://f1douhw6hyux" path="res://Art/sheet.png" id="1_iowwp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(20, 70)
+
+[node name="Laze_azul" type="Area2D" unique_id=761727888]
+script = ExtResource("1_bcrxc")
+
+[node name="Sheet" type="Sprite2D" parent="." unique_id=2023092380]
+texture_filter = 1
+texture = ExtResource("1_iowwp")
+region_enabled = true
+region_rect = Rect2(699, 351, 72, 71)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2140602309]
+scale = Vector2(1.3904431, 1.1328031)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

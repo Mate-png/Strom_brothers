@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cwi7myq1fvxxg"]
 
+[ext_resource type="Script" uid="uid://ddqas7v8ikebw" path="res://Scripts/cañones/cañon_1.gd" id="1_b0fu4"]
 [ext_resource type="Texture2D" uid="uid://f1douhw6hyux" path="res://Art/sheet.png" id="1_pwmbv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ik0ch"]
@@ -10,6 +11,7 @@ region = Rect2(279.347, 361.49768, 71.5744, 58.77997)
 size = Vector2(71, 58)
 
 [node name="caño" type="StaticBody2D" unique_id=312826290]
+script = ExtResource("1_b0fu4")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1310024479]
 position = Vector2(0.5, 0)
@@ -18,3 +20,10 @@ texture = SubResource("AtlasTexture_ik0ch")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=230060672]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=565751276]
+position = Vector2(-45, 0)
+
+[node name="disparo_tiempo" type="Timer" parent="." unique_id=1057338679]
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=894443991]

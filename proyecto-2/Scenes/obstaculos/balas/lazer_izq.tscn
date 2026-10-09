@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://d2axghf2xgn46"]
+
+[ext_resource type="Script" uid="uid://bfamblafh1ogb" path="res://Scripts/balas/lazer_base.gd" id="1_q3qy7"]
+[ext_resource type="Texture2D" uid="uid://f1douhw6hyux" path="res://Art/sheet.png" id="2_v51nq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g66ly"]
+size = Vector2(20, 70)
+
+[node name="Lazer_rojo" type="Area2D" unique_id=412356872]
+script = ExtResource("1_q3qy7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=277087164]
+rotation = 1.5707964
+scale = Vector2(1.4469459, 1.0639089)
+shape = SubResource("RectangleShape2D_g66ly")
+debug_color = Color(0.97939974, 0, 0.39222088, 0.41960785)
+
+[node name="Sheet" type="Sprite2D" parent="." unique_id=1484105290]
+texture_filter = 1
+position = Vector2(1, 0)
+rotation = 1.5707964
+texture = ExtResource("2_v51nq")
+region_enabled = true
+region_rect = Rect2(700.4675, 352.28683, 70.098755, 68.76065)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
