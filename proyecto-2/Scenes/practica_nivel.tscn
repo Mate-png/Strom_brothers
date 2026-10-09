@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://c7jaudcip3kuu"]
 
-[ext_resource type="Script" uid="uid://der1oyr7mnph4" path="res://Scripts/mundo.gd" id="1_gxfkt"]
+[ext_resource type="Script" uid="uid://dfjopptkxwlul" path="res://Scripts/mundo.gd" id="1_gxfkt"]
 [ext_resource type="Script" uid="uid://dfurl0u50a1k6" path="res://Scripts/daño.gd" id="1_hmlax"]
 [ext_resource type="Texture2D" uid="uid://bhnuq56yqibd7" path="res://icon.svg" id="1_o37dk"]
-[ext_resource type="PackedScene" uid="uid://o2bjoybuhyyi" path="res://Scenes/Player.tscn" id="2_6x4ks"]
-[ext_resource type="PackedScene" uid="uid://vdmvablmj6wt" path="res://Scenes/daño.tscn" id="2_nrdb8"]
-[ext_resource type="PackedScene" uid="uid://dai3jy3ilbudu" path="res://Scenes/player_2.tscn" id="3_jfd5m"]
+[ext_resource type="PackedScene" uid="uid://o2bjoybuhyyi" path="res://Scenes/Jugadores/Player.tscn" id="2_6x4ks"]
+[ext_resource type="PackedScene" uid="uid://vdmvablmj6wt" path="res://Scenes/obstaculos/daño.tscn" id="2_nrdb8"]
+[ext_resource type="PackedScene" uid="uid://dai3jy3ilbudu" path="res://Scenes/Jugadores/player_2.tscn" id="3_jfd5m"]
 [ext_resource type="Script" uid="uid://cv7lcrbts3bga" path="res://Scripts/camera script.gd" id="4_8avd1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]

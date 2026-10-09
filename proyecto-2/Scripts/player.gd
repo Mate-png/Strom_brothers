@@ -65,6 +65,9 @@ func update_animation(direction: float) -> void:
 	if not is_on_floor():
 		if velocity.y < 0:
 			sprite.play("jump")
+		else:
+			sprite.play("idle")
+		return
 
 	if direction != 0:
 		sprite.play("walk")
@@ -77,6 +80,9 @@ func take_damage(cantidad):
 	if health <= 0:
 		morir()
 
+func rebote():
+	velocity.y  += EMPUJE
+
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("coin"):
 		set_count(coin_collected + 1)
@@ -84,7 +90,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 	if coin_collected % 5 == 0:
 		gain_life()
-		
+
 func gain_life():
 	vida.value += 1
 

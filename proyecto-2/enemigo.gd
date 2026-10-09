@@ -27,7 +27,7 @@ func _physics_process(delta: float) -> void:
 		#velocity = direction * SPEED
 		#move_and_slide()
 		
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var cuerpos = $Vision.get_overlapping_bodies()
 	for cuerpo in cuerpos:
 		if cuerpo.is_in_group("Player"):
@@ -55,7 +55,9 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		body.take_damage(DAÑO)
 
 func _on_area_da_body_entered(body: Node2D) -> void:
-	queue_free()
+	if body.has_method("rebote"):
+		body.rebote()
+		queue_free()
 
 
 #func _on_area_da_player_body_entered(body: Node2D) -> void:

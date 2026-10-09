@@ -5,6 +5,7 @@ const SPEED = 200
 const JUMP_VELOCITY = -400.0
 const DASH_DURATION = 0.2
 const DASH_SPEED = 300.0
+const EMPUJE  = -500
 
 const GRAVITY = 30.0
 const GRAVITY_WALL = 150.0

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bdarsg1qn05ti"]
 
-[ext_resource type="Script" uid="uid://iiwoi1u6s3ur" path="res://Scenes/menu.gd" id="1_cayip"]
+[ext_resource type="Script" uid="uid://iiwoi1u6s3ur" path="res://Scripts/menu.gd" id="1_cayip"]
 [ext_resource type="Texture2D" uid="uid://d0sttfat7uj4a" path="res://Art/STORM_BROTHERS.png" id="1_xhh6f"]
 [ext_resource type="Texture2D" uid="uid://dg8qq4fgk6gjy" path="res://Art/ui/PNG/You_Win/Table.png" id="3_158mb"]
 [ext_resource type="FontFile" uid="uid://bd6etsf4r5bmk" path="res://Scenes/molki/AlfaSlabOne-Regular.ttf" id="4_wwsa2"]
