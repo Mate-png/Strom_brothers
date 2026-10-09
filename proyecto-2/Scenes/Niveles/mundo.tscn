@@ -782,8 +782,8 @@ z_index = -1
 scroll_scale = Vector2(0, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1615505421]
-position = Vector2(608.24994, 322)
-scale = Vector2(0.28320313, 0.29814813)
+position = Vector2(595.1875, 378.125)
+scale = Vector2(0.17561853, 0.1917824)
 texture = ExtResource("10_w6udh")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1567658030]
