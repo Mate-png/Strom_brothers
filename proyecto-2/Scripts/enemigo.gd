@@ -6,6 +6,7 @@ extends CharacterBody2D
 @onready var currentHealth: int = maxHealth
 @onready var raycastleft = $RayCast2D
 @onready var raycastright = $RayCast2D2
+@onready var golpesfx: AudioStreamPlayer = %golpessfx
 const DAÑO = 25
 const SPEED = 70
 var direction = 1
@@ -41,6 +42,7 @@ func Damage(cantidad):
 	maxHealth -= cantidad
 	if maxHealth <= 0:
 		queue_free()
+		%golpessfx.play()
 		
 func danio():
 	$Timer.start()
@@ -57,6 +59,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_area_da_body_entered(body: Node2D) -> void:
 	if body.has_method("rebote"):
 		body.rebote()
+		%golpessfx.play()
 		queue_free()
 
 

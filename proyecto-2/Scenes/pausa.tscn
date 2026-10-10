@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://b3ojleeh2l1xn"]
+
+[ext_resource type="Texture2D" uid="uid://j4fqnjk1a81" path="res://Art/243 sin título_20261003111310.png" id="1_tgh8a"]
+[ext_resource type="Script" uid="uid://d2fmm76vd1wma" path="res://Scripts/pausa.gd" id="1_vk2cv"]
+
+[node name="Pausa" type="Control" unique_id=61717577]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vk2cv")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=343175991]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 6.1035156e-05
+offset_right = 2690.0
+offset_bottom = 1512.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.2989361, 0.30000496)
+texture = ExtResource("1_tgh8a")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=631794613]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.19607843, 0.19607843, 0.19607843, 0.6039216)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2072568654]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 77.0
+offset_top = -73.999985
+offset_right = 163.0
+offset_bottom = -8.0
+grow_vertical = 2
+scale = Vector2(2.6882951, 2.07807)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=934656006]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer" unique_id=2084514746]
+layout_mode = 2
+text = "Continuar"
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1090163115]
+layout_mode = 2
+text = "Salir"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

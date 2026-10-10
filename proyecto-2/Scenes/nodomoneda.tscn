@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://g41sc0p5dvnt" path="res://Scripts/coin.gd" id="1_ugb88"]
 [ext_resource type="Texture2D" uid="uid://b78055k7dla44" path="res://Scenes/molki/moneda rara.png" id="2_ba785"]
+[ext_resource type="AudioStream" uid="uid://b6vodndbvgy6e" path="res://Scenes/SFX/S1_CE.wav" id="3_fuknn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g4v7s"]
 radius = 16.03122
@@ -19,5 +20,10 @@ texture = ExtResource("2_ba785")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="coin" unique_id=364375406]
 shape = SubResource("CircleShape2D_g4v7s")
 debug_color = Color(0.8, 0.38431373, 0.4509804, 0.85490197)
+
+[node name="coinsfx" type="AudioStreamPlayer" parent="." unique_id=567343071]
+unique_name_in_owner = true
+stream = ExtResource("3_fuknn")
+volume_db = -19.428
 
 [connection signal="area_entered" from="coin" to="coin" method="_on_area_entered"]

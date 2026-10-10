@@ -7,7 +7,7 @@ resource_name = "Panner"
 resource_name = "Phaser"
 
 [resource]
-bus/0/volume_db = -7.6307178
+bus/0/volume_db = -0.52823544
 bus/0/effect/0/effect = SubResource("AudioEffectPanner_trqlu")
 bus/0/effect/0/enabled = false
 bus/0/effect/1/effect = SubResource("AudioEffectPhaser_trqlu")

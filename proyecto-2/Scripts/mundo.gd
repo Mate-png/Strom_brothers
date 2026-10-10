@@ -1,6 +1,7 @@
 extends Node
 
 var Musica = preload("res://Art/Audio/workout.ogg")
+@onready var pausa: Control = $Camara/Camera2D/Pausa
 
 
 func _process(_delta: float) -> void:
@@ -11,6 +12,7 @@ func _process(_delta: float) -> void:
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("cerrar"):
-		get_tree().quit()
+		pausa.visible = true
+		get_tree().paused = true
 	elif Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()

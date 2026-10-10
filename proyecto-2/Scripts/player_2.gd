@@ -2,7 +2,8 @@ extends Jugador
 
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
 @onready var vida: TextureProgressBar = $CanvasLayer/vida
-
+@onready var moriste: CanvasLayer = $moriste
+@onready var saltosfx: AudioStreamPlayer = $saltosfx
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 var coin_label: Label
 
@@ -25,7 +26,8 @@ func _physics_process(_delta: float) -> void:
 		handle_wall()
 		handle_jump()
 		update_animation(direction)
-
+	if Input.is_action_just_pressed("salto"):
+		$saltosfx.play()
 		if wall_lock_timer<= 0.0:
 			velocity.x = direction* SPEED
 
@@ -52,6 +54,7 @@ func _physics_process(_delta: float) -> void:
 		var colider = colision.get_collider()
 		
 		if colider is TileMapLayer and colider.name == "Pinchos":
+			moriste.visible = true
 			morir()
 
 
@@ -82,11 +85,14 @@ func take_damage(cantidad):
 	super(cantidad)
 	vida.value = health
 	if health <= 0:
+		moriste.visible = true
 		morir()
 
 func rebote():
 	velocity.y  += EMPUJE
 
+func morir():
+	can_move = false
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("coin"):

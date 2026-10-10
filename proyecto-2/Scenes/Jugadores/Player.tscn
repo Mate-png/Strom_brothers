@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bru7byahh51rj" path="res://Scenes/molki/hermano1/saltar4.png" id="10_opqna"]
 [ext_resource type="Texture2D" uid="uid://ch73bffsr2reo" path="res://Scenes/molki/hermano1/saltar5.png" id="11_00okb"]
 [ext_resource type="Texture2D" uid="uid://dgve75x0jo86c" path="res://Scenes/molki/hermano1/saltar33.png" id="12_6hr71"]
+[ext_resource type="PackedScene" uid="uid://cqv4bob4qhe7r" path="res://Scenes/perdiste.tscn" id="21_26xyg"]
 [ext_resource type="Texture2D" uid="uid://bpnkf7m7w4f1s" path="res://Scenes/molki/hermano1/ani1.png" id="25_y6y60"]
 [ext_resource type="Texture2D" uid="uid://d048fi2gj22qj" path="res://Scenes/molki/hermano1/ani2.png" id="26_vmcrb"]
 [ext_resource type="Texture2D" uid="uid://b75u7jm6sbftn" path="res://Scenes/molki/hermano1/ani3.png" id="27_teras"]
@@ -138,5 +139,12 @@ texture_over = ExtResource("4_nn08x")
 texture_progress = ExtResource("5_52ee3")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1461452059]
+
+[node name="moriste" type="CanvasLayer" parent="." unique_id=399753733]
+process_mode = 3
+visible = false
+
+[node name="perdiste" parent="moriste" unique_id=2007632126 instance=ExtResource("21_26xyg")]
+process_mode = 3
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

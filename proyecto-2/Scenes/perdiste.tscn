@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cqv4bob4qhe7r"]
 
-[ext_resource type="Script" uid="uid://cso3821bvilpx" path="res://Scenes/perdiste.gd" id="1_2d3xh"]
+[ext_resource type="Script" uid="uid://cso3821bvilpx" path="res://Scripts/perdiste.gd" id="1_2d3xh"]
 [ext_resource type="FontFile" uid="uid://bd6etsf4r5bmk" path="res://Scenes/molki/AlfaSlabOne-Regular.ttf" id="1_amg8w"]
 [ext_resource type="Texture2D" uid="uid://dppga4eakpa80" path="res://Art/ui/PNG/Hangar/Table_02.png" id="2_2d3xh"]
 [ext_resource type="Texture2D" uid="uid://b43d80woxmer5" path="res://Scenes/molki/perdistez.png" id="2_qemw1"]
@@ -31,7 +31,7 @@ position = Vector2(611, 462.00003)
 scale = Vector2(0.42812493, 0.42812493)
 texture = ExtResource("2_qemw1")
 
-[node name="Label" type="Label" parent="ColorRect" unique_id=1765631151]
+[node name="Perdiste" type="Label" parent="ColorRect" unique_id=1765631151]
 layout_mode = 0
 offset_left = 345.0
 offset_top = 148.0
@@ -39,7 +39,7 @@ offset_right = 811.0
 offset_bottom = 286.0
 theme_override_fonts/font = ExtResource("1_amg8w")
 theme_override_font_sizes/font_size = 100
-text = "Perdiste"
+text = "Perdiste..."
 horizontal_alignment = 1
 vertical_alignment = 3
 autowrap_mode = 2
@@ -54,7 +54,7 @@ scale = Vector2(0.8880068, 0.8546216)
 icon = SubResource("AtlasTexture_xrivr")
 flat = true
 
-[node name="Label" type="Label" parent="Button" unique_id=753655826]
+[node name="Reiniciar" type="Label" parent="Button" unique_id=753655826]
 layout_mode = 0
 offset_left = 39.0
 offset_top = 23.0

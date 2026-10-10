@@ -43,9 +43,6 @@ func handle_jump():
 		wall_lock_timer = WALL_LOCK_TIME 
 		wall_coyote_timer = 0.0
 
-func morir():
-	print ("mori " , character)
-	get_tree().call_deferred("reload_current_scene")
 
 func start_dash(dir: float):
 	is_dashing = true

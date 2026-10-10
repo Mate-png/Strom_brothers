@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://dai3jy3ilbudu"]
+
+[ext_resource type="Script" uid="uid://ufbbup5qh82x" path="res://Scripts/player_2.gd" id="1_cgts5"]
+[ext_resource type="Texture2D" uid="uid://bu5lyut0erguq" path="res://Scenes/molki/hermano2/h2salto.png" id="2_achxb"]
+[ext_resource type="Texture2D" uid="uid://w8w4mysqs770" path="res://Scenes/molki/hermano2/hno2stand1.png" id="3_0mk22"]
+[ext_resource type="Texture2D" uid="uid://bhhxjdn5lmnhp" path="res://Art/barra vida/p2/healt (1)_p2.png" id="3_eus2p"]
+[ext_resource type="Texture2D" uid="uid://cmc68brsr2om4" path="res://Art/barra vida/over.png" id="4_6cafw"]
+[ext_resource type="Texture2D" uid="uid://bhey77gsxaq47" path="res://Scenes/molki/hermano2/hno2stand2.png" id="4_kx34b"]
+[ext_resource type="Texture2D" uid="uid://bwe4q5cml0pm0" path="res://Scenes/molki/hermano2/hno2stand3.png" id="5_ia3qp"]
+[ext_resource type="Texture2D" uid="uid://qb4yj0k47ak6" path="res://Art/barra vida/p2/healt2_p2.png" id="5_mtyrt"]
+[ext_resource type="Texture2D" uid="uid://j57c7eafno86" path="res://Scenes/molki/hermano2/hno2stand4.png" id="6_ba12c"]
+[ext_resource type="Texture2D" uid="uid://2eib8b0kc3i8" path="res://Scenes/molki/hermano2/hno2stand5.png" id="7_etd2g"]
+[ext_resource type="Texture2D" uid="uid://cvfki0meayqha" path="res://Scenes/molki/hermano2/hno2Salto1.png" id="8_2xhua"]
+[ext_resource type="Texture2D" uid="uid://40m7ay1njcq1" path="res://Scenes/molki/hermano2/hno2salto2.png" id="9_7jg8n"]
+[ext_resource type="Texture2D" uid="uid://diyrsw37m1qu8" path="res://Scenes/molki/hermano2/hno2salto3.png" id="10_vblla"]
+[ext_resource type="PackedScene" uid="uid://cqv4bob4qhe7r" path="res://Scenes/perdiste.tscn" id="19_cmkw6"]
+[ext_resource type="Texture2D" uid="uid://eo5mwf3dkkvd" path="res://Scenes/molki/hermano2/hno2correr1.png" id="25_u3fu5"]
+[ext_resource type="Texture2D" uid="uid://iydymbk0uo61" path="res://Scenes/molki/hermano2/hno2correr2.png" id="26_ryvcr"]
+[ext_resource type="Texture2D" uid="uid://cenrv75p146kq" path="res://Scenes/molki/hermano2/hno2correr3.png" id="27_una76"]
+[ext_resource type="Texture2D" uid="uid://cfvp2wnlqe4v4" path="res://Scenes/molki/hermano2/hno2correr4.png" id="28_ctwtc"]
+[ext_resource type="Texture2D" uid="uid://bt4cfywa6imp5" path="res://Scenes/molki/hermano2/hno2correr5.png" id="29_084ek"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_achxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_achxb")
+}],
+"loop": 0,
+"name": &"dash",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_0mk22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kx34b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ia3qp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ba12c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_etd2g")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_2xhua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7jg8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vblla")
+}],
+"loop": 0,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_u3fu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ryvcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_una76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ctwtc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_084ek")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yf5fn"]
+radius = 12.0
+height = 28.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yuas8"]
+radius = 15.033297
+
+[node name="Player2" type="CharacterBody2D" unique_id=1414705170]
+script = ExtResource("1_cgts5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=879582761]
+position = Vector2(-0.4799987, -1.9750001)
+scale = Vector2(0.051500004, 0.048642855)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+animation = &"dash"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=101814628]
+position = Vector2(0, 1)
+shape = SubResource("CapsuleShape2D_yf5fn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1249292918]
+visible = false
+
+[node name="vida" type="TextureProgressBar" parent="CanvasLayer" unique_id=98673041]
+texture_filter = 1
+offset_left = 952.99994
+offset_top = 1.0000001
+offset_right = 1085.0
+offset_bottom = 41.0
+scale = Vector2(1.5116283, 1.5866655)
+texture_under = ExtResource("3_eus2p")
+texture_over = ExtResource("4_6cafw")
+texture_progress = ExtResource("5_mtyrt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=364197523]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2011073601]
+shape = SubResource("CircleShape2D_yuas8")
+debug_color = Color(0.79065764, 0.42914754, 3.85046e-07, 0.41960785)
+
+[node name="moriste" type="CanvasLayer" parent="." unique_id=242286356]
+process_mode = 3
+visible = false
+
+[node name="perdiste" parent="moriste" unique_id=2007632126 instance=ExtResource("19_cmkw6")]
+process_mode = 3
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
