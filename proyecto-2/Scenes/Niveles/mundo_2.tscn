@@ -322,10 +322,11 @@ position = Vector2(19991, -2696)
 zoom = Vector2(2.27, 2.27)
 
 [node name="Label" parent="Camara/Camera2D" index="0" unique_id=1405165684]
-offset_left = 54.0
-offset_top = -123.0
-offset_right = 242.0
-offset_bottom = -81.0
+offset_left = -251.0
+offset_top = -106.0
+offset_right = -67.0
+offset_bottom = -64.0
+theme_override_font_sizes/font_size = 22
 
 [node name="Pausa" parent="Camara/Camera2D" index="1" unique_id=61717577 instance=ExtResource("18_wufsj")]
 visible = false
