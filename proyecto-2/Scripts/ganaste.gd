@@ -1,6 +1,10 @@
 extends Node
+@onready var ganaste: Label = $Silueta/ganaste
+@onready var menu: Label = $Button/menu
 
-
+func _ready() -> void:
+	ganaste.text = "¡Ganaste!"
+	menu.text = "Menú"
 
 
 
