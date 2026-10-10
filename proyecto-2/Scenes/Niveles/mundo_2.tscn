@@ -14,9 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://bnnoif2rqco1d" path="res://Scenes/nodomoneda.tscn" id="9_5sjel"]
 [ext_resource type="PackedScene" uid="uid://bmifuqyfc3dsv" path="res://Scenes/obstaculos/cañones/cañon_down.tscn" id="9_wufsj"]
 [ext_resource type="PackedScene" uid="uid://ocklhpb02ryu" path="res://Scenes/obstaculos/cañones/cañon_rigth.tscn" id="10_8863v"]
-[ext_resource type="PackedScene" uid="uid://buu5rq5v608st" path="res://Scenes/obstaculos/cañones/cañon_top.tscn" id="11_w5n63"]
+[ext_resource type="PackedScene" uid="uid://buu5rq5v608st" path="res://Scenes/SFX/cañon_top.tscn" id="11_w5n63"]
 [ext_resource type="PackedScene" uid="uid://bowar38bsrmnd" path="res://Scenes/obstaculos/deadline.tscn" id="12_8otm8"]
 [ext_resource type="PackedScene" uid="uid://dxo4a0kddagaa" path="res://Scenes/palanca.tscn" id="15_i4lkx"]
+[ext_resource type="PackedScene" uid="uid://b3ojleeh2l1xn" path="res://Scenes/pausa.tscn" id="18_wufsj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b88mh"]
 texture = ExtResource("1_joq2a")
@@ -246,10 +247,10 @@ position = Vector2(14020, -3396)
 position = Vector2(13718, -2829)
 
 [node name="Player" parent="." unique_id=2016557864 instance=ExtResource("2_2f3cg")]
-position = Vector2(154, 509)
+position = Vector2(317, 530)
 
 [node name="Player2" parent="." unique_id=1414705170 instance=ExtResource("3_t83iy")]
-position = Vector2(21415, -4276)
+position = Vector2(21295, -4288)
 
 [node name="Cañones" type="Node" parent="." unique_id=1190144007]
 
@@ -285,6 +286,12 @@ position = Vector2(14908, -3325)
 position = Vector2(13915, -2269)
 
 [node name="Camara" parent="." unique_id=1393843745 instance=ExtResource("5_knnd7")]
+
+[node name="Camera2D" parent="Camara" index="0" unique_id=354594807]
+zoom = Vector2(2.27, 2.27)
+
+[node name="Pausa" parent="Camara/Camera2D" index="1" unique_id=61717577 instance=ExtResource("18_wufsj")]
+visible = false
 
 [node name="Meta" parent="." unique_id=19064331 instance=ExtResource("6_fm2ni")]
 position = Vector2(12353.001, -2520)

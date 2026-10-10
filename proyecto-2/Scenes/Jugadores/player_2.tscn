@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cvfki0meayqha" path="res://Scenes/molki/hermano2/hno2Salto1.png" id="8_2xhua"]
 [ext_resource type="Texture2D" uid="uid://40m7ay1njcq1" path="res://Scenes/molki/hermano2/hno2salto2.png" id="9_7jg8n"]
 [ext_resource type="Texture2D" uid="uid://diyrsw37m1qu8" path="res://Scenes/molki/hermano2/hno2salto3.png" id="10_vblla"]
+[ext_resource type="PackedScene" uid="uid://cqv4bob4qhe7r" path="res://Scenes/perdiste.tscn" id="19_cmkw6"]
 [ext_resource type="Texture2D" uid="uid://eo5mwf3dkkvd" path="res://Scenes/molki/hermano2/hno2correr1.png" id="25_u3fu5"]
 [ext_resource type="Texture2D" uid="uid://iydymbk0uo61" path="res://Scenes/molki/hermano2/hno2correr2.png" id="26_ryvcr"]
 [ext_resource type="Texture2D" uid="uid://cenrv75p146kq" path="res://Scenes/molki/hermano2/hno2correr3.png" id="27_una76"]
@@ -127,5 +128,11 @@ texture_progress = ExtResource("5_mtyrt")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2011073601]
 shape = SubResource("CircleShape2D_yuas8")
 debug_color = Color(0.79065764, 0.42914754, 3.85046e-07, 0.41960785)
+
+[node name="moriste" type="CanvasLayer" parent="." unique_id=242286356]
+process_mode = 3
+visible = false
+
+[node name="perdiste" parent="moriste" unique_id=2007632126 instance=ExtResource("19_cmkw6")]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

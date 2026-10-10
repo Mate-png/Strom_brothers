@@ -15,9 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://dxo4a0kddagaa" path="res://Scenes/palanca.tscn" id="13_1tg0d"]
 [ext_resource type="AudioStream" uid="uid://t2hx06uvfq2b" path="res://Scenes/SFX/S1_A0.wav" id="13_p68h6"]
 [ext_resource type="PackedScene" uid="uid://cwi7myq1fvxxg" path="res://Scenes/obstaculos/cañones/cañon_left.tscn" id="14_c4pq3"]
-[ext_resource type="PackedScene" uid="uid://buu5rq5v608st" path="res://Scenes/obstaculos/cañones/cañon_top.tscn" id="15_j2o5r"]
+[ext_resource type="PackedScene" uid="uid://buu5rq5v608st" path="res://Scenes/SFX/cañon_top.tscn" id="15_j2o5r"]
 [ext_resource type="PackedScene" uid="uid://bmifuqyfc3dsv" path="res://Scenes/obstaculos/cañones/cañon_down.tscn" id="16_ctm0j"]
 [ext_resource type="PackedScene" uid="uid://ocklhpb02ryu" path="res://Scenes/obstaculos/cañones/cañon_rigth.tscn" id="17_qo1ng"]
+[ext_resource type="PackedScene" uid="uid://b3ojleeh2l1xn" path="res://Scenes/pausa.tscn" id="19_qo1ng"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gqidu"]
 texture = ExtResource("2_p68h6")
@@ -775,6 +776,13 @@ offset_top = -113.0
 offset_right = -119.0
 offset_bottom = -82.0
 theme_override_font_sizes/font_size = 22
+
+[node name="Pausa" parent="Camara/Camera2D" index="1" unique_id=61717577 instance=ExtResource("19_qo1ng")]
+visible = false
+offset_left = -4.0
+offset_top = 11.0
+offset_right = -4.0
+offset_bottom = 11.0
 
 [node name="Meta" parent="." unique_id=19064331 instance=ExtResource("6_j2o5r")]
 position = Vector2(9695.001, 3209.9998)

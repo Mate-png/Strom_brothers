@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cqv4bob4qhe7r"]
 
-[ext_resource type="Script" uid="uid://cso3821bvilpx" path="res://Scenes/perdiste.gd" id="1_2d3xh"]
+[ext_resource type="Script" uid="uid://cso3821bvilpx" path="res://Scripts/perdiste.gd" id="1_2d3xh"]
 [ext_resource type="FontFile" uid="uid://bd6etsf4r5bmk" path="res://Scenes/molki/AlfaSlabOne-Regular.ttf" id="1_amg8w"]
 [ext_resource type="Texture2D" uid="uid://dppga4eakpa80" path="res://Art/ui/PNG/Hangar/Table_02.png" id="2_2d3xh"]
 [ext_resource type="Texture2D" uid="uid://b43d80woxmer5" path="res://Scenes/molki/perdistez.png" id="2_qemw1"]

@@ -1,5 +1,6 @@
 extends Jugador
 
+@onready var moriste: CanvasLayer = $moriste
 @onready var vida: TextureProgressBar = $CanvasLayer/vida
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -53,6 +54,7 @@ func _physics_process(_delta: float) -> void:
 		var colision = get_slide_collision(i)
 		var colider = colision.get_collider()
 		if colider is TileMapLayer and colider.name == "Pinchos":
+			moriste.visible = true
 			morir()
 
 
@@ -88,7 +90,13 @@ func take_damage(cantidad):
 	super(cantidad)
 	vida.value = health
 	if health <= 0:
+		moriste.visible = true
 		morir()
+
+func morir():
+	can_move = false
+
+
 
 func rebote():
 	velocity.y  += EMPUJE

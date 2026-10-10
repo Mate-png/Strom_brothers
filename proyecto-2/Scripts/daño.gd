@@ -4,4 +4,4 @@ const DAÑO = 25
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Jugadores") and body.has_method("morir"):
-		body.morir()
+		body.moriste.visible = true
