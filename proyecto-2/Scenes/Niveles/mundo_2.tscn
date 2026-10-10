@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ckq50g2l1awoe" path="res://Art/sheetice.png" id="7_aikbd"]
 [ext_resource type="Script" uid="uid://ctwof8ckxexah" path="res://Scripts/meta_nivel2.gd" id="8_8otm8"]
 [ext_resource type="Texture2D" uid="uid://sdc5cmb4vjcx" path="res://Art/fondos/ce.png" id="8_kregd"]
+[ext_resource type="AudioStream" uid="uid://t2hx06uvfq2b" path="res://Scenes/SFX/S1_A0.wav" id="8_wufsj"]
 [ext_resource type="PackedScene" uid="uid://bnnoif2rqco1d" path="res://Scenes/nodomoneda.tscn" id="9_5sjel"]
 [ext_resource type="PackedScene" uid="uid://bmifuqyfc3dsv" path="res://Scenes/obstaculos/cañones/cañon_down.tscn" id="9_wufsj"]
 [ext_resource type="PackedScene" uid="uid://ocklhpb02ryu" path="res://Scenes/obstaculos/cañones/cañon_rigth.tscn" id="10_8863v"]
@@ -249,8 +250,18 @@ position = Vector2(13718, -2829)
 [node name="Player" parent="." unique_id=2016557864 instance=ExtResource("2_2f3cg")]
 position = Vector2(317, 530)
 
+[node name="saltosfx" type="AudioStreamPlayer" parent="Player" unique_id=1533844421]
+stream = ExtResource("8_wufsj")
+volume_db = -14.882
+pitch_scale = 1.52
+
 [node name="Player2" parent="." unique_id=1414705170 instance=ExtResource("3_t83iy")]
 position = Vector2(21295, -4288)
+
+[node name="saltosfx" type="AudioStreamPlayer" parent="Player2" unique_id=1913291849]
+stream = ExtResource("8_wufsj")
+volume_db = -20.188
+pitch_scale = 1.52
 
 [node name="Cañones" type="Node" parent="." unique_id=1190144007]
 

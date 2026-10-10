@@ -3,7 +3,7 @@ extends Jugador
 @onready var canvas_layer: CanvasLayer = $CanvasLayer
 @onready var vida: TextureProgressBar = $CanvasLayer/vida
 @onready var moriste: CanvasLayer = $moriste
-
+@onready var saltosfx: AudioStreamPlayer = $saltosfx
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 var coin_label: Label
 
@@ -26,7 +26,8 @@ func _physics_process(_delta: float) -> void:
 		handle_wall()
 		handle_jump()
 		update_animation(direction)
-
+	if Input.is_action_just_pressed("salto"):
+		$saltosfx.play()
 		if wall_lock_timer<= 0.0:
 			velocity.x = direction* SPEED
 

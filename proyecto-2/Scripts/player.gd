@@ -20,7 +20,8 @@ func _physics_process(_delta: float) -> void:
 	var direction := Input.get_axis("Left","Rigth")
 	if not is_on_floor():
 		velocity.y += GRAVITY
-
+	if Input.is_action_just_pressed("salto"):
+		$saltosfx.play()
 	if can_move == true :
 
 		canvas_layer.visible =true
@@ -72,11 +73,11 @@ func update_animation(direction: float) -> void:
 	if is_dashing:
 		sprite.play("dash")
 		return
-
+	
 	if not is_on_floor():
 		if velocity.y < 0:
 			sprite.play("jump")
-			#$saltosfx.play()
+			
 		else:
 			sprite.play("idle")
 		return

@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dgqht67vfjg1r" path="res://Scenes/molki/Untitled628_20261005202630.png" id="4_kk6kw"]
 [ext_resource type="Script" uid="uid://c4vo00ywdw5er" path="res://Scripts/vision.gd" id="5_6nktl"]
 [ext_resource type="Script" uid="uid://cip1x714yg5bi" path="res://Scripts/area_da_player.gd" id="6_eogsx"]
+[ext_resource type="AudioStream" uid="uid://dn6lcxi44khoa" path="res://Scenes/enemigos/S1_C1.wav" id="7_y4jc4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_yf5fn"]
 animations = [{
@@ -71,6 +72,12 @@ script = ExtResource("5_6nktl")
 position = Vector2(0, 17)
 shape = SubResource("RectangleShape2D_57qmd")
 debug_color = Color(0.34933552, 0.19408244, 0.43815398, 0.41960785)
+
+[node name="golpessfx" type="AudioStreamPlayer" parent="." unique_id=1135895198]
+unique_name_in_owner = true
+stream = ExtResource("7_y4jc4")
+volume_db = 1.061
+pitch_scale = 0.88
 
 [connection signal="body_entered" from="AreaDa" to="." method="_on_area_da_body_entered"]
 [connection signal="area_entered" from="AreaDaPlayer" to="AreaDaPlayer" method="_on_area_entered"]
