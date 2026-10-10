@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bdfyhq32vfvqs"]
+
+[ext_resource type="Script" uid="uid://b6uxmrch4ynk" path="res://Scenes/molki/balas_danio.gd" id="1_urlhr"]
+[ext_resource type="Texture2D" uid="uid://cfijd7rgw82n8" path="res://Scripts/tile_132.png" id="2_5qr11"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cf2w3"]
+height = 56.0
+
+[node name="BALASDanio" type="Area2D" unique_id=1840455376]
+script = ExtResource("1_urlhr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1660264315]
+position = Vector2(0.9999981, -1.9999986)
+rotation = -1.3665928
+scale = Vector2(1.1795167, 0.8298812)
+skew = 1.0227627
+texture = ExtResource("2_5qr11")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=292201863]
+position = Vector2(1, -2)
+shape = SubResource("CapsuleShape2D_cf2w3")
+debug_color = Color(0.54470783, 0.5258752, 0.5771419, 0.41960785)

@@ -1,7 +1,7 @@
 extends StaticBody2D
 
 var lazer_scene  = preload("res://Scenes/obstaculos/balas/lazer_izq.tscn")
-@export var timepo_disparo: float = 0.3
+@export var timepo_disparo: float = 0.4
 @export var activo = true
 
 @onready var marker: Marker2D = $Marker2D
