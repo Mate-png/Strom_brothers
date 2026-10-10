@@ -31,7 +31,7 @@ position = Vector2(611, 462.00003)
 scale = Vector2(0.42812493, 0.42812493)
 texture = ExtResource("2_qemw1")
 
-[node name="Label" type="Label" parent="ColorRect" unique_id=1765631151]
+[node name="Perdiste" type="Label" parent="ColorRect" unique_id=1765631151]
 layout_mode = 0
 offset_left = 345.0
 offset_top = 148.0
@@ -54,7 +54,7 @@ scale = Vector2(0.8880068, 0.8546216)
 icon = SubResource("AtlasTexture_xrivr")
 flat = true
 
-[node name="Label" type="Label" parent="Button" unique_id=753655826]
+[node name="Reiniciar" type="Label" parent="Button" unique_id=753655826]
 layout_mode = 0
 offset_left = 39.0
 offset_top = 23.0

@@ -1,6 +1,6 @@
 extends Node
 
-var Musica = preload("res://Art/Audio/song2.mp3")
+var Musica = preload("res://Art/Audio/song2.ogg")
 @onready var pausa: Control = $Camara/Camera2D/Pausa
 
 
