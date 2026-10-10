@@ -36,13 +36,11 @@ func _process(delta: float) -> void:
 
 func recibir_impacto_bola() -> void:
 	golpes_recibidos += 1
-	print("¡IMPACTO EXITOSO! Golpes: ", golpes_recibidos)
 	
 	temporizador = 0.0
 	disparar_bola_desde_enemigo()
 	
 	if golpes_recibidos >= MAX_GOLPES:
-		print("¡El jefe ha muerto a los 3 golpes!")
 		queue_free()
 
 func disparar_bola_desde_enemigo() -> void:
@@ -59,7 +57,6 @@ func disparar_bola_desde_enemigo() -> void:
 	if bola is RigidBody2D:
 		var dir_x = -1 if randi() % 2 == 0 else 1
 		bola.apply_impulse(Vector2(dir_x * 300, -100))
-		print("¡Bola nueva lanzada!")
 
 func _on_vision_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
